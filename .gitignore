@@ -1,0 +1,21 @@
+# Local dependencies and generated builds
+**/.deps/
+**/__pycache__/
+*.pyc
+*.so
+/baseline/build/
+/autotune/build/
+# Workloads and local oracle caches
+/baseline/data/
+**/.oracle_cache/
+# New runs; archived result files already present are tracked
+/results/
+/autotune/results/
+/autotune/profiles/local.json
+/autotune/profiles/*.lock
+# Editor and system files
+.venv/
+.vscode/
+.DS_Store
+Thumbs.db
+*.tmp

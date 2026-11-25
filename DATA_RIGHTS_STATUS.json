@@ -1,0 +1,18 @@
+{
+  "checked_date": "2026-11-25",
+  "all_workloads_retained": true,
+  "glove25": {
+    "status": "upstream_license_found",
+    "license": "PDDL-1.0",
+    "source": "https://nlp.stanford.edu/projects/glove/"
+  },
+  "siftsmall": {
+    "status": "mirror_mit_label_found_upstream_redistribution_not_confirmed",
+    "source": "https://huggingface.co/datasets/vecdata/siftsmall/blob/main/README.md"
+  },
+  "sift1m": {
+    "status": "upstream_redistribution_not_confirmed",
+    "source": "http://corpus-texmex.irisa.fr/"
+  },
+  "all_redistribution_rights_confirmed": false
+}

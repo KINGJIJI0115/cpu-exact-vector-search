@@ -1,0 +1,43 @@
+{
+  "dataset": "SIFTsmall real descriptors",
+  "n": 10000,
+  "q": 32,
+  "d": 128,
+  "k": 10,
+  "repeats": 7,
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-mavx2",
+    "-mfma",
+    "-ffp-contract=off",
+    "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/src/benchmark.cpp",
+    "-o",
+    "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/build/benchmark_ablation"
+  ],
+  "command": [
+    "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/build/benchmark_ablation",
+    "10000",
+    "32",
+    "128",
+    "10",
+    "7",
+    "256",
+    "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/data/siftsmall_base.fvecs",
+    "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/data/siftsmall_query.fvecs"
+  ],
+  "source_sha256": "6e6ebb9c5ec6ce89a4d9d2fa20baeb3c685b39d147d6c6eb9af565af56f11fc5",
+  "data_manifest": {
+    "source": "https://huggingface.co/datasets/vecdata/siftsmall/resolve/3106e1b83049c44713b1ce06942d0ab474bbdfb6/siftsmall.tar.gz",
+    "original_source": "ftp://ftp.irisa.fr/local/texmex/corpus/siftsmall.tar.gz",
+    "description": "SIFT small: image descriptors; 10000 base, 100 query, 128 dimensions",
+    "license": "Check original provider terms before redistributing; data excluded from source deliverables.",
+    "sha256": {
+      "mirror.tar.gz": "987b526d24e749082ba27ee8068003836eb17a61b34f09b4db865750f8a43487",
+      "siftsmall_base.fvecs": "1e90414a3254361aba48a0d58e461f7661fb135dabb3da985290e94de8f60fe0",
+      "siftsmall_groundtruth.ivecs": "b0717bf276111a166f14dcc2653fd04465b2afd6d34c72be641b622cf99f95ae",
+      "siftsmall_query.fvecs": "095af38bda2741be721447ba97e9286fa918ece946be92a9ae133276eddc1a10"
+    }
+  }
+}

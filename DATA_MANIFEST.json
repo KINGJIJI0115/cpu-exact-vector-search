@@ -1,0 +1,29 @@
+{
+  "source_zip_sha256": "d2b0300179b31ddf915d03d709a379b550d2c000e22867363137f1c90f958cdc",
+  "files": {
+    "baseline/data/glove25/glove-25-angular.hdf5": {
+      "bytes": 127359688,
+      "sha256": "51004cb0ae962159f0db507a51fec2b395de14b166f55976c89f16bd2f8b6391"
+    },
+    "baseline/data/glove25/manifest.json": {
+      "bytes": 744,
+      "sha256": "41844eb986a0bbab3f4ce4cdab7064500d27b87e5c6a20352dd8de1b599289de"
+    },
+    "baseline/data/manifest.json": {
+      "bytes": 814,
+      "sha256": "49fa02fc4f22508750ae7fffd8d2cef1be55a3e36354c8af82840cb8ef332ef0"
+    },
+    "baseline/data/mirror.tar.gz": {
+      "bytes": 5304531,
+      "sha256": "987b526d24e749082ba27ee8068003836eb17a61b34f09b4db865750f8a43487"
+    },
+    "baseline/data/sift1m/manifest.json": {
+      "bytes": 678,
+      "sha256": "9765328804d36127b3daf7f2f4041320e27584aa451d22bce5df890591373aed"
+    },
+    "baseline/data/sift1m/sift.tar.gz.part": {
+      "bytes": 168280445,
+      "sha256": "92f1270c5e3a0cb46b89983e72b0511e4df065c31a9fa0276d8c9b1fca5bc81a"
+    }
+  }
+}

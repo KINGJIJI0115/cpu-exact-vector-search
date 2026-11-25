@@ -1,0 +1,4 @@
+* -text
+# Preserve exact bytes for source fingerprint and MANIFEST verification.
+*.pdf binary
+*.png binary

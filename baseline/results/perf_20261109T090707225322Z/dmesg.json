@@ -1,0 +1,6 @@
+{
+  "lines": [
+    "[    0.067629] Performance Events: unsupported CPU family 6 model 198 no PMU driver, software events only.",
+    "[    0.131664] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer"
+  ]
+}

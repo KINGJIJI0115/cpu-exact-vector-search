@@ -1,0 +1,192 @@
+{
+  "status": "completed",
+  "stage": "confirmation",
+  "source_hashes": {
+    "compare.py": "2781ab9568033a047e55d62468fca28f2c94214b07116732639bfc84ed82d7bd",
+    "hybrid.py": "9fd207abb5507bf39e229b74f60a2b9a77e61035a2a2a57e559bbb17f480154b",
+    "src/direct_packed.cpp": "e058d712dae1f944859299ec957c56411f0f761453918341e9bab7e10296dda4",
+    "src/library.cpp": "8636085d4d1153a9bd64e4912bfab2d0006485c4e74afa5c31c0a17926801a48",
+    "src/benchmark.cpp": "6e6ebb9c5ec6ce89a4d9d2fa20baeb3c685b39d147d6c6eb9af565af56f11fc5",
+    "goal_scope.json": "3f429ab26836b066444f29c49685a0da30dc2abf348cf3653103589a7f881f9e",
+    "goal_suite.py": "c060290f01486db31e1612befbbd2accd4f402d66016b3910fc5642bb1254d2b",
+    "oracle_cache.py": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28"
+  },
+  "scope": {
+    "objective": "All existing full-database evaluation configurations: custom exact search no slower than fastest measured Faiss path",
+    "datasets": {
+      "sift1m": {
+        "n": 1000000,
+        "d": 128
+      },
+      "glove25": {
+        "n": 1183514,
+        "d": 25
+      }
+    },
+    "configs": [
+      [
+        "glove25",
+        1,
+        10
+      ],
+      [
+        "glove25",
+        1,
+        100
+      ],
+      [
+        "glove25",
+        8,
+        10
+      ],
+      [
+        "glove25",
+        8,
+        100
+      ],
+      [
+        "glove25",
+        32,
+        10
+      ],
+      [
+        "glove25",
+        32,
+        100
+      ],
+      [
+        "glove25",
+        128,
+        10
+      ],
+      [
+        "sift1m",
+        1,
+        1
+      ],
+      [
+        "sift1m",
+        1,
+        10
+      ],
+      [
+        "sift1m",
+        1,
+        100
+      ],
+      [
+        "sift1m",
+        2,
+        10
+      ],
+      [
+        "sift1m",
+        4,
+        10
+      ],
+      [
+        "sift1m",
+        8,
+        1
+      ],
+      [
+        "sift1m",
+        8,
+        10
+      ],
+      [
+        "sift1m",
+        8,
+        100
+      ],
+      [
+        "sift1m",
+        32,
+        1
+      ],
+      [
+        "sift1m",
+        32,
+        10
+      ],
+      [
+        "sift1m",
+        32,
+        100
+      ],
+      [
+        "sift1m",
+        32,
+        1000
+      ],
+      [
+        "sift1m",
+        128,
+        1
+      ],
+      [
+        "sift1m",
+        128,
+        5
+      ],
+      [
+        "sift1m",
+        128,
+        10
+      ],
+      [
+        "sift1m",
+        128,
+        50
+      ],
+      [
+        "sift1m",
+        128,
+        100
+      ],
+      [
+        "sift1m",
+        256,
+        10
+      ],
+      [
+        "sift1m",
+        256,
+        100
+      ]
+    ],
+    "baseline_seed": 20261130,
+    "confirmation_seed": 20261201,
+    "confirmation_batches": 3,
+    "repeats": 7,
+    "pass_rule": "Every configuration and each of 3 disjoint unseen query batches: median(custom) / min(median of all applicable Faiss controls) <=1.0 and correctness passes. SIFT controls: default, direct, BLAS, exact QT_8bit_direct; GloVe controls: default, direct, BLAS. No post-hoc tolerance. Finite measured criterion, not a universal guarantee.",
+    "constraints": [
+      "No BLAS or Faiss calls in custom search",
+      "Preserve exact-search target and existing SIFT/float validation policies",
+      "Same single-thread affinity and timing boundaries",
+      "No background performance runs",
+      "All configurations and failures retained",
+      "Freeze implementation before confirmation; changes invalidate that confirmation",
+      "Preprocessing remains outside query timings with costs recorded, consistently for all methods"
+    ],
+    "revision": 2,
+    "faiss_methods": {
+      "sift1m": [
+        "faiss_flat",
+        "faiss_direct",
+        "faiss_blas",
+        "faiss_sq8_direct"
+      ],
+      "glove25": [
+        "faiss_flat",
+        "faiss_direct",
+        "faiss_blas"
+      ]
+    },
+    "confirmation_excludes_baseline_queries": true,
+    "revision_reason": "Before any final confirmation, add exact-byte Faiss SQ8 direct control to match the new lossless representation; exclude all training query IDs from confirmation. Same 26 configs, 3 disjoint batches, 7 repeats and <=1 median-ratio criterion."
+  },
+  "completed_cases": 78,
+  "passed_cases": 78,
+  "all_cases_pass": true
+}

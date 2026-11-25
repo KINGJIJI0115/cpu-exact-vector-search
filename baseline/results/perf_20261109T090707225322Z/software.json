@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/lib/linux-tools/5.15.0-202-generic/perf",
+    "stat",
+    "-e",
+    "task-clock,context-switches,page-faults",
+    "--",
+    "/bin/sleep",
+    "0.1"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "\n Performance counter stats for '/bin/sleep 0.1':\n\n              0.36 msec task-clock                #    0.004 CPUs utilized          \n                 1      context-switches          #    2.745 K/sec                  \n                81      page-faults               #  222.324 K/sec                  \n\n       0.100757714 seconds time elapsed\n\n       0.000642000 seconds user\n       0.000000000 seconds sys\n\n\n"
+}

@@ -1,0 +1,15 @@
+{
+  "glove25": {
+    "adaptive_seconds": 0.6258300989866257,
+    "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+    "queries_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087",
+    "faiss_flat_seconds": 0.10268829204142094
+  },
+  "sift1m": {
+    "adaptive_seconds": 3.2505315616726875,
+    "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+    "queries_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+    "faiss_flat_seconds": 0.45259896852076054,
+    "faiss_sq8_seconds": 0.224705059081316
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/lib/linux-tools/5.15.0-202-generic/perf",
+    "stat",
+    "-e",
+    "cycles:u,instructions:u,cache-references:u,cache-misses:u",
+    "--",
+    "/bin/sleep",
+    "0.1"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "\n Performance counter stats for '/bin/sleep 0.1':\n\n   <not supported>      cycles:u                                                    \n   <not supported>      instructions:u                                              \n   <not supported>      cache-references:u                                          \n   <not supported>      cache-misses:u                                              \n\n       0.101091871 seconds time elapsed\n\n       0.000649000 seconds user\n       0.000000000 seconds sys\n\n\n"
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/usr/lib/linux-tools/5.15.0-202-generic/perf",
+    "report",
+    "--stdio",
+    "--no-children",
+    "--percent-limit",
+    "1",
+    "-i",
+    "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/results/perf_20261109T090707225322Z/perf.data"
+  ],
+  "returncode": 255,
+  "stdout": "",
+  "stderr": "File /mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/results/perf_20261109T090707225322Z/perf.data not owned by current user or root (use -f to override)\n"
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "nq": 8,
+    "method": "direct_auto",
+    "median_ms": 7.506456,
+    "min_ms": 7.06223,
+    "max_ms": 8.380698
+  },
+  {
+    "nq": 8,
+    "method": "faiss_flat",
+    "median_ms": 60.83919,
+    "min_ms": 57.65677,
+    "max_ms": 70.292394
+  },
+  {
+    "nq": 8,
+    "method": "faiss_direct",
+    "median_ms": 63.049549,
+    "min_ms": 58.97339,
+    "max_ms": 76.14941
+  },
+  {
+    "nq": 8,
+    "method": "faiss_blas",
+    "median_ms": 24.911348,
+    "min_ms": 21.60697,
+    "max_ms": 29.174822
+  }
+]
+Results: /mnt/d/系统优化/vector-search/results/comparison_20261124T050538592987Z

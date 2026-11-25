@@ -1,0 +1,10 @@
+{
+  "reason": "Only remove duplicate label keyword while formatting cached result; calibration, validation, selection and kernel code unchanged.",
+  "old_driver_sha256": "f69b3106d8ff2b8b0aa3c52272fd2a3bc4d245ffb2d6365327d6d2dd887cd6fd",
+  "new_driver_sha256": "b122d8cc555e90e169551f75f90f9ba5193bb619d458a7c0d3c1bb972100e6c3",
+  "old_policy_hash": "8b827aff6ec4db2508eac0aafcf1dc05d2dc6221a4b419886b1a3e7e08d745e8",
+  "new_policy_hash": "2d98810579d844c116566fb3f23580d616cff7e00f2bcde287457523af4f783c",
+  "unchanged_entries_sha256": "7ba5312831f5cf959094670eb07b0092a8ab1bfc57208f6f248de11b3b6fc044",
+  "old_statement": "report.append(dict(label=label,status='reused',**profile['entries'][key]))",
+  "new_statement": "report.append(dict(profile['entries'][key],status='reused'))"
+}

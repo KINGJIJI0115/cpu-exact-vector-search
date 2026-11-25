@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/usr/lib/linux-tools/5.15.0-202-generic/perf",
+    "--version"
+  ],
+  "returncode": 0,
+  "stdout": "perf version 5.15.222\n",
+  "stderr": ""
+}

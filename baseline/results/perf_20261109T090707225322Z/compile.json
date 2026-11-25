@@ -1,0 +1,17 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-g",
+    "-fno-omit-frame-pointer",
+    "-mavx2",
+    "-ffp-contract=off",
+    "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/src/profile.cpp",
+    "-o",
+    "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/build/profile_perf"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

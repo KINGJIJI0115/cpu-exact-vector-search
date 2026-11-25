@@ -1,0 +1,38 @@
+[
+  {
+    "nq": 8,
+    "method": "direct_auto",
+    "median_ms": 12.026351,
+    "min_ms": 11.883041,
+    "max_ms": 12.671448
+  },
+  {
+    "nq": 8,
+    "method": "faiss_flat",
+    "median_ms": 177.079718,
+    "min_ms": 174.300464,
+    "max_ms": 181.322047
+  },
+  {
+    "nq": 8,
+    "method": "faiss_direct",
+    "median_ms": 175.331293,
+    "min_ms": 171.595091,
+    "max_ms": 179.646524
+  },
+  {
+    "nq": 8,
+    "method": "faiss_blas",
+    "median_ms": 70.704091,
+    "min_ms": 68.865585,
+    "max_ms": 73.169076
+  },
+  {
+    "nq": 8,
+    "method": "faiss_sq8_direct",
+    "median_ms": 52.470651,
+    "min_ms": 50.313623,
+    "max_ms": 56.341927
+  }
+]
+Results: /mnt/d/系统优化/vector-search/results/comparison_20261124T051200671497Z

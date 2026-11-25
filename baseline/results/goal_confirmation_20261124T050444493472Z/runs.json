@@ -1,0 +1,314 @@
+[
+  {
+    "label": "glove25_q1_k10_b0",
+    "folder": "results/comparison_20261124T050444963813Z"
+  },
+  {
+    "label": "glove25_q1_k10_b1",
+    "folder": "results/comparison_20261124T050450368771Z"
+  },
+  {
+    "label": "glove25_q1_k10_b2",
+    "folder": "results/comparison_20261124T050455827458Z"
+  },
+  {
+    "label": "glove25_q1_k100_b0",
+    "folder": "results/comparison_20261124T050501213943Z"
+  },
+  {
+    "label": "glove25_q1_k100_b1",
+    "folder": "results/comparison_20261124T050506585264Z"
+  },
+  {
+    "label": "glove25_q1_k100_b2",
+    "folder": "results/comparison_20261124T050511875423Z"
+  },
+  {
+    "label": "glove25_q8_k10_b0",
+    "folder": "results/comparison_20261124T050517096187Z"
+  },
+  {
+    "label": "glove25_q8_k10_b1",
+    "folder": "results/comparison_20261124T050524417201Z"
+  },
+  {
+    "label": "glove25_q8_k10_b2",
+    "folder": "results/comparison_20261124T050531424919Z"
+  },
+  {
+    "label": "glove25_q8_k100_b0",
+    "folder": "results/comparison_20261124T050538592987Z"
+  },
+  {
+    "label": "glove25_q8_k100_b1",
+    "folder": "results/comparison_20261124T050544498673Z"
+  },
+  {
+    "label": "glove25_q8_k100_b2",
+    "folder": "results/comparison_20261124T050550725580Z"
+  },
+  {
+    "label": "glove25_q32_k10_b0",
+    "folder": "results/comparison_20261124T050556995338Z"
+  },
+  {
+    "label": "glove25_q32_k10_b1",
+    "folder": "results/comparison_20261124T050610033412Z"
+  },
+  {
+    "label": "glove25_q32_k10_b2",
+    "folder": "results/comparison_20261124T050623965720Z"
+  },
+  {
+    "label": "glove25_q32_k100_b0",
+    "folder": "results/comparison_20261124T050637896054Z"
+  },
+  {
+    "label": "glove25_q32_k100_b1",
+    "folder": "results/comparison_20261124T050648130052Z"
+  },
+  {
+    "label": "glove25_q32_k100_b2",
+    "folder": "results/comparison_20261124T050658356295Z"
+  },
+  {
+    "label": "glove25_q128_k10_b0",
+    "folder": "results/comparison_20261124T050708540215Z"
+  },
+  {
+    "label": "glove25_q128_k10_b1",
+    "folder": "results/comparison_20261124T050745523152Z"
+  },
+  {
+    "label": "glove25_q128_k10_b2",
+    "folder": "results/comparison_20261124T050822466714Z"
+  },
+  {
+    "label": "sift1m_q1_k1_b0",
+    "folder": "results/comparison_20261124T050858702150Z"
+  },
+  {
+    "label": "sift1m_q1_k1_b1",
+    "folder": "results/comparison_20261124T050907714388Z"
+  },
+  {
+    "label": "sift1m_q1_k1_b2",
+    "folder": "results/comparison_20261124T050916167302Z"
+  },
+  {
+    "label": "sift1m_q1_k10_b0",
+    "folder": "results/comparison_20261124T050924680819Z"
+  },
+  {
+    "label": "sift1m_q1_k10_b1",
+    "folder": "results/comparison_20261124T050933009046Z"
+  },
+  {
+    "label": "sift1m_q1_k10_b2",
+    "folder": "results/comparison_20261124T050941221953Z"
+  },
+  {
+    "label": "sift1m_q1_k100_b0",
+    "folder": "results/comparison_20261124T050949265482Z"
+  },
+  {
+    "label": "sift1m_q1_k100_b1",
+    "folder": "results/comparison_20261124T050957845306Z"
+  },
+  {
+    "label": "sift1m_q1_k100_b2",
+    "folder": "results/comparison_20261124T051005905838Z"
+  },
+  {
+    "label": "sift1m_q2_k10_b0",
+    "folder": "results/comparison_20261124T051014167342Z"
+  },
+  {
+    "label": "sift1m_q2_k10_b1",
+    "folder": "results/comparison_20261124T051023517587Z"
+  },
+  {
+    "label": "sift1m_q2_k10_b2",
+    "folder": "results/comparison_20261124T051032637890Z"
+  },
+  {
+    "label": "sift1m_q4_k10_b0",
+    "folder": "results/comparison_20261124T051041562787Z"
+  },
+  {
+    "label": "sift1m_q4_k10_b1",
+    "folder": "results/comparison_20261124T051051899445Z"
+  },
+  {
+    "label": "sift1m_q4_k10_b2",
+    "folder": "results/comparison_20261124T051101754369Z"
+  },
+  {
+    "label": "sift1m_q8_k1_b0",
+    "folder": "results/comparison_20261124T051111711192Z"
+  },
+  {
+    "label": "sift1m_q8_k1_b1",
+    "folder": "results/comparison_20261124T051124243250Z"
+  },
+  {
+    "label": "sift1m_q8_k1_b2",
+    "folder": "results/comparison_20261124T051136617949Z"
+  },
+  {
+    "label": "sift1m_q8_k10_b0",
+    "folder": "results/comparison_20261124T051149477540Z"
+  },
+  {
+    "label": "sift1m_q8_k10_b1",
+    "folder": "results/comparison_20261124T051200671497Z"
+  },
+  {
+    "label": "sift1m_q8_k10_b2",
+    "folder": "results/comparison_20261124T051211628724Z"
+  },
+  {
+    "label": "sift1m_q8_k100_b0",
+    "folder": "results/comparison_20261124T051222641091Z"
+  },
+  {
+    "label": "sift1m_q8_k100_b1",
+    "folder": "results/comparison_20261124T051233719277Z"
+  },
+  {
+    "label": "sift1m_q8_k100_b2",
+    "folder": "results/comparison_20261124T051244766085Z"
+  },
+  {
+    "label": "sift1m_q32_k1_b0",
+    "folder": "results/comparison_20261124T051255892371Z"
+  },
+  {
+    "label": "sift1m_q32_k1_b1",
+    "folder": "results/comparison_20261124T051328401362Z"
+  },
+  {
+    "label": "sift1m_q32_k1_b2",
+    "folder": "results/comparison_20261124T051357664108Z"
+  },
+  {
+    "label": "sift1m_q32_k10_b0",
+    "folder": "results/comparison_20261124T051426991259Z"
+  },
+  {
+    "label": "sift1m_q32_k10_b1",
+    "folder": "results/comparison_20261124T051448803846Z"
+  },
+  {
+    "label": "sift1m_q32_k10_b2",
+    "folder": "results/comparison_20261124T051510698927Z"
+  },
+  {
+    "label": "sift1m_q32_k100_b0",
+    "folder": "results/comparison_20261124T051532228248Z"
+  },
+  {
+    "label": "sift1m_q32_k100_b1",
+    "folder": "results/comparison_20261124T051553947946Z"
+  },
+  {
+    "label": "sift1m_q32_k100_b2",
+    "folder": "results/comparison_20261124T051615550040Z"
+  },
+  {
+    "label": "sift1m_q32_k1000_b0",
+    "folder": "results/comparison_20261124T051637125841Z"
+  },
+  {
+    "label": "sift1m_q32_k1000_b1",
+    "folder": "results/comparison_20261124T051659684890Z"
+  },
+  {
+    "label": "sift1m_q32_k1000_b2",
+    "folder": "results/comparison_20261124T051722082971Z"
+  },
+  {
+    "label": "sift1m_q128_k1_b0",
+    "folder": "results/comparison_20261124T051744861808Z"
+  },
+  {
+    "label": "sift1m_q128_k1_b1",
+    "folder": "results/comparison_20261124T051918432393Z"
+  },
+  {
+    "label": "sift1m_q128_k1_b2",
+    "folder": "results/comparison_20261124T052051325710Z"
+  },
+  {
+    "label": "sift1m_q128_k5_b0",
+    "folder": "results/comparison_20261124T052224700813Z"
+  },
+  {
+    "label": "sift1m_q128_k5_b1",
+    "folder": "results/comparison_20261124T052326832673Z"
+  },
+  {
+    "label": "sift1m_q128_k5_b2",
+    "folder": "results/comparison_20261124T052429240296Z"
+  },
+  {
+    "label": "sift1m_q128_k10_b0",
+    "folder": "results/comparison_20261124T052532142572Z"
+  },
+  {
+    "label": "sift1m_q128_k10_b1",
+    "folder": "results/comparison_20261124T052635042990Z"
+  },
+  {
+    "label": "sift1m_q128_k10_b2",
+    "folder": "results/comparison_20261124T052738100822Z"
+  },
+  {
+    "label": "sift1m_q128_k50_b0",
+    "folder": "results/comparison_20261124T052840320636Z"
+  },
+  {
+    "label": "sift1m_q128_k50_b1",
+    "folder": "results/comparison_20261124T052942844622Z"
+  },
+  {
+    "label": "sift1m_q128_k50_b2",
+    "folder": "results/comparison_20261124T053045769196Z"
+  },
+  {
+    "label": "sift1m_q128_k100_b0",
+    "folder": "results/comparison_20261124T053149288957Z"
+  },
+  {
+    "label": "sift1m_q128_k100_b1",
+    "folder": "results/comparison_20261124T053252753533Z"
+  },
+  {
+    "label": "sift1m_q128_k100_b2",
+    "folder": "results/comparison_20261124T053357068379Z"
+  },
+  {
+    "label": "sift1m_q256_k10_b0",
+    "folder": "results/comparison_20261124T053504994884Z"
+  },
+  {
+    "label": "sift1m_q256_k10_b1",
+    "folder": "results/comparison_20261124T053744210692Z"
+  },
+  {
+    "label": "sift1m_q256_k10_b2",
+    "folder": "results/comparison_20261124T054020240647Z"
+  },
+  {
+    "label": "sift1m_q256_k100_b0",
+    "folder": "results/comparison_20261124T054255789363Z"
+  },
+  {
+    "label": "sift1m_q256_k100_b1",
+    "folder": "results/comparison_20261124T054455155905Z"
+  },
+  {
+    "label": "sift1m_q256_k100_b2",
+    "folder": "results/comparison_20261124T054655025342Z"
+  }
+]

@@ -1,0 +1,677 @@
+[
+  {
+    "dataset": "sift1m",
+    "method": "direct_auto",
+    "q": 128,
+    "k": 100,
+    "input_bytes": 512000000,
+    "input_rss_kib": 543092,
+    "setup_rss_kib": 1168232,
+    "after_search_rss_kib": 1168592,
+    "peak_rss_kib": 1168552,
+    "index_payload_bytes": 640000064,
+    "setup_ms": 590.7632320004268,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 0
+  },
+  {
+    "dataset": "sift1m",
+    "method": "faiss_blas",
+    "q": 128,
+    "k": 100,
+    "input_bytes": 512000000,
+    "input_rss_kib": 542924,
+    "setup_rss_kib": 1043212,
+    "after_search_rss_kib": 1049016,
+    "peak_rss_kib": 1048856,
+    "index_payload_bytes": 512000000,
+    "setup_ms": 237.4886970001171,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 0
+  },
+  {
+    "dataset": "sift1m",
+    "method": "faiss_sq8_direct",
+    "q": 128,
+    "k": 100,
+    "input_bytes": 512000000,
+    "input_rss_kib": 543100,
+    "setup_rss_kib": 668652,
+    "after_search_rss_kib": 669124,
+    "peak_rss_kib": 668896,
+    "index_payload_bytes": 128000000,
+    "setup_ms": 508.57748399994307,
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 0
+  },
+  {
+    "dataset": "glove25",
+    "method": "direct_auto",
+    "q": 128,
+    "k": 10,
+    "input_bytes": 118351400,
+    "input_rss_kib": 159368,
+    "setup_rss_kib": 275080,
+    "after_search_rss_kib": 275144,
+    "peak_rss_kib": 274884,
+    "index_payload_bytes": 118352064,
+    "setup_ms": 81.90050200028054,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 0
+  },
+  {
+    "dataset": "glove25",
+    "method": "faiss_blas",
+    "q": 128,
+    "k": 10,
+    "input_bytes": 118351400,
+    "input_rss_kib": 159140,
+    "setup_rss_kib": 274996,
+    "after_search_rss_kib": 280036,
+    "peak_rss_kib": 280428,
+    "index_payload_bytes": 118351400,
+    "setup_ms": 59.50379900059488,
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 0
+  },
+  {
+    "dataset": "sift1m",
+    "method": "direct_auto",
+    "q": 128,
+    "k": 100,
+    "input_bytes": 512000000,
+    "input_rss_kib": 543032,
+    "setup_rss_kib": 1168176,
+    "after_search_rss_kib": 1168548,
+    "peak_rss_kib": 1168468,
+    "index_payload_bytes": 640000064,
+    "setup_ms": 550.0745219997043,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 1
+  },
+  {
+    "dataset": "sift1m",
+    "method": "faiss_blas",
+    "q": 128,
+    "k": 100,
+    "input_bytes": 512000000,
+    "input_rss_kib": 543036,
+    "setup_rss_kib": 1043376,
+    "after_search_rss_kib": 1049208,
+    "peak_rss_kib": 1049032,
+    "index_payload_bytes": 512000000,
+    "setup_ms": 253.5858470000676,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 1
+  },
+  {
+    "dataset": "sift1m",
+    "method": "faiss_sq8_direct",
+    "q": 128,
+    "k": 100,
+    "input_bytes": 512000000,
+    "input_rss_kib": 543016,
+    "setup_rss_kib": 668564,
+    "after_search_rss_kib": 669028,
+    "peak_rss_kib": 668748,
+    "index_payload_bytes": 128000000,
+    "setup_ms": 127.5025889999597,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 1
+  },
+  {
+    "dataset": "glove25",
+    "method": "direct_auto",
+    "q": 128,
+    "k": 10,
+    "input_bytes": 118351400,
+    "input_rss_kib": 159412,
+    "setup_rss_kib": 275124,
+    "after_search_rss_kib": 275208,
+    "peak_rss_kib": 275052,
+    "index_payload_bytes": 118352064,
+    "setup_ms": 64.02066999999079,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 1
+  },
+  {
+    "dataset": "glove25",
+    "method": "faiss_blas",
+    "q": 128,
+    "k": 10,
+    "input_bytes": 118351400,
+    "input_rss_kib": 159368,
+    "setup_rss_kib": 275288,
+    "after_search_rss_kib": 280352,
+    "peak_rss_kib": 280612,
+    "index_payload_bytes": 118351400,
+    "setup_ms": 60.97688499994547,
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 1
+  },
+  {
+    "dataset": "sift1m",
+    "method": "direct_auto",
+    "q": 128,
+    "k": 100,
+    "input_bytes": 512000000,
+    "input_rss_kib": 542964,
+    "setup_rss_kib": 1168108,
+    "after_search_rss_kib": 1168464,
+    "peak_rss_kib": 1168296,
+    "index_payload_bytes": 640000064,
+    "setup_ms": 560.6266069999037,
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 2
+  },
+  {
+    "dataset": "sift1m",
+    "method": "faiss_blas",
+    "q": 128,
+    "k": 100,
+    "input_bytes": 512000000,
+    "input_rss_kib": 543052,
+    "setup_rss_kib": 1043332,
+    "after_search_rss_kib": 1049144,
+    "peak_rss_kib": 1048984,
+    "index_payload_bytes": 512000000,
+    "setup_ms": 260.1189630004228,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 2
+  },
+  {
+    "dataset": "sift1m",
+    "method": "faiss_sq8_direct",
+    "q": 128,
+    "k": 100,
+    "input_bytes": 512000000,
+    "input_rss_kib": 542936,
+    "setup_rss_kib": 668480,
+    "after_search_rss_kib": 668904,
+    "peak_rss_kib": 668608,
+    "index_payload_bytes": 128000000,
+    "setup_ms": 124.23163400035264,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 2
+  },
+  {
+    "dataset": "glove25",
+    "method": "direct_auto",
+    "q": 128,
+    "k": 10,
+    "input_bytes": 118351400,
+    "input_rss_kib": 159352,
+    "setup_rss_kib": 275064,
+    "after_search_rss_kib": 275120,
+    "peak_rss_kib": 274936,
+    "index_payload_bytes": 118352064,
+    "setup_ms": 64.24603599953116,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 2
+  },
+  {
+    "dataset": "glove25",
+    "method": "faiss_blas",
+    "q": 128,
+    "k": 10,
+    "input_bytes": 118351400,
+    "input_rss_kib": 159260,
+    "setup_rss_kib": 275176,
+    "after_search_rss_kib": 280196,
+    "peak_rss_kib": 280568,
+    "index_payload_bytes": 118351400,
+    "setup_ms": 59.29493999974511,
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/vector-search/.deps/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+        "version": "0.3.15",
+        "threading_layer": "openmp",
+        "architecture": "Haswell"
+      }
+    ],
+    "scope": "Fresh process; same original input array retained; no exhaustive oracle allocated. RSS includes runtime/libraries. Payload excludes allocator/object overhead. Correctness validated separately.",
+    "repeat": 2
+  }
+]

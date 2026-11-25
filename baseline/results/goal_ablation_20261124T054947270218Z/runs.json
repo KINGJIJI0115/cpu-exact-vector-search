@@ -1,0 +1,14 @@
+[
+  {
+    "label": "sift1m_q1_k100",
+    "folder": "results/comparison_20261124T054952129435Z"
+  },
+  {
+    "label": "sift1m_q128_k100",
+    "folder": "results/comparison_20261124T055002185449Z"
+  },
+  {
+    "label": "glove25_q128_k10",
+    "folder": "results/comparison_20261124T055110496112Z"
+  }
+]

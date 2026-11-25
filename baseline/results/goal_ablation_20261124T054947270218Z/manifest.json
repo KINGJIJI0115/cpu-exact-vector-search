@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "main_source_sha256": "e058d712dae1f944859299ec957c56411f0f761453918341e9bab7e10296dda4",
+  "identical_function_bodies": {
+    "byte128_search": "327c93c9925b68ab7343a724cfb54df3347698842dc2888374904f961c44d656",
+    "fixed25_search": "af922968725662930be574c4fa97a31742e7f98ab54a5ed80a55e4d4caf28596"
+  },
+  "note": "Forced component kernels; same selected function bodies as production. Final dispatcher performance is established separately by 78-case confirmation."
+}

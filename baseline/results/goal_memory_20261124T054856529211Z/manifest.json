@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "source_sha256": "e058d712dae1f944859299ec957c56411f0f761453918341e9bab7e10296dda4",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-mavx2",
+    "-mfma",
+    "-ffp-contract=off",
+    "-shared",
+    "-fPIC",
+    "src/direct_packed.cpp",
+    "-o",
+    "build/libpacked.so"
+  ],
+  "processes": 15
+}
