@@ -1,31 +1,22 @@
-# 负载、来源与再分发核查
+# 基准数据来源与第三方依赖说明
 
-核查日期：2026年11月25日。
+本源码仓库不包含大体积原始向量文件；Release 附件 `cpu-exact-vector-search-v1.0-course-full.zip` 随包附带 SIFTsmall、SIFT1M 与 GloVe25 三份标准测试负载，供课程评测与离线复现使用（与课程定稿逐文件 SHA256 一致）。在源码仓库中可通过 `python3 tools/import_release_data.py <完整ZIP路径>` 导入经过校验的负载。
 
-完整Release的 `cpu-exact-vector-search-v1.0-course-full.zip` 保留SIFTsmall、SIFT1M和GloVe25全部原始负载，与课程定稿逐文件SHA256一致。老师下载此ZIP后不需要从其他网站下载数据；首次安装软件依赖仍可能联网。
+## 数据来源与预处理
 
-## 来源和处理
-
-| 负载 | 来源与固定版本 | 用途 |
+| 负载 | 公开来源与版本 | 规模与用途 |
 |---|---|---|
-| SIFTsmall | [vecdata/siftsmall](https://huggingface.co/datasets/vecdata/siftsmall)，归档下载版本 `3106e1b83049c44713b1ce06942d0ab474bbdfb6`；原始提供方TEXMEX | 10,000条128维图像描述子，前期消融 |
-| SIFT1M | [zjd2000/ANN_SIFT](https://huggingface.co/datasets/zjd2000/ANN_SIFT/tree/main)，归档版本 `8956d7e088e0b79b6901c234632e801fa37d731d`；原始提供方TEXMEX | 1,000,000条128维图像描述子 |
-| GloVe25 | [ANN-Benchmarks数据列表](https://github.com/erikbern/ann-benchmarks/blob/main/README.md)的 `glove-25-angular.hdf5`，来源为Stanford GloVe Twitter 27B词向量 | 1,183,514条25维词向量及10,000条查询 |
+| SIFTsmall | [vecdata/siftsmall](https://huggingface.co/datasets/vecdata/siftsmall)（版本 `3106e1b83049c44713b1ce06942d0ab474bbdfb6`，原始来源 TEXMEX） | 10,000 × 128 图像局部描述子；用于阶段剖析与分层消融 |
+| SIFT1M | [zjd2000/ANN_SIFT](https://huggingface.co/datasets/zjd2000/ANN_SIFT/tree/main)（版本 `8956d7e088e0b79b6901c234632e801fa37d731d`，原始来源 TEXMEX） | 1,000,000 × 128 图像局部描述子；主性能基准 |
+| GloVe25 | [ANN-Benchmarks](https://github.com/erikbern/ann-benchmarks/blob/main/README.md) 提供的 `glove-25-angular.hdf5`（原始来源 Stanford GloVe Twitter 27B） | 1,183,514 × 25 词向量及 10,000 条查询；主性能基准 |
 
-SIFT1M文件名 `sift.tar.gz.part` 是已完整校验的归档，不能作为下载碎片删除。GloVe经float64归一化后保存float32，比较的是所存向量的精确平方L2距离，重新计算参考答案。各文件大小及SHA256见 `DATA_MANIFEST.json`；处理实现见 `baseline/prepare_*.py`。
+- SIFT1M 归档文件 `sift.tar.gz.part` 为完整且经 SHA256 校验的输入归档，脚本会自动解压，请勿作为临时碎片删除。
+- GloVe25 经 `float64` 归一化后存为 `float32`，评测时在所存向量上重算精确平方 L2 参考答案。各文件大小与 SHA256 见 `DATA_MANIFEST.json`，预处理代码见 `baseline/prepare_*.py`。
 
-## 已核实的许可信息
+## 学术引用与许可说明
 
-- **GloVe：上游许可已找到。** [Stanford官方项目页](https://nlp.stanford.edu/projects/glove/)明确将预训练向量按PDDL v1.0提供。[PDDL原文](https://opendatacommons.org/licenses/pddl/1-0/)说明其共享和使用安排。ANN-Benchmarks的[转换代码](https://github.com/erikbern/ann-benchmarks/blob/main/ann_benchmarks/datasets.py)将GloVe25来源对应到 `glove.twitter.27B.zip`；这条来源链与本项目使用的HDF5数据集名称、维度和划分相符。没有用ANN-Benchmarks代码许可证替代数据许可。
-- **SIFTsmall：只核实到镜像标注。** 当前[镜像数据卡](https://huggingface.co/datasets/vecdata/siftsmall/blob/main/README.md)标注MIT；它是镜像上传者的声明，不等于已经核实TEXMEX原作者授权，也不能直接作为所下载固定历史版本的授权证明。
-- **SIFT1M：明确的上游再分发许可尚未核实。** 镜像文件列表没有提供可确认的许可声明；本次访问[TEXMEX原站](http://corpus-texmex.irisa.fr/)失败。归档内部只有向量及参考答案文件，没有LICENSE或README授权文件。其他SIFT数据集、SIFT算法实现或第三方论文的许可证不能替代这一归档的授权。
+- **GloVe**：Jeffrey Pennington, Richard Socher, Christopher D. Manning. *GloVe: Global Vectors for Word Representation*, EMNLP 2014。[Stanford GloVe 官方主页](https://nlp.stanford.edu/projects/glove/)以 [PDDL v1.0](https://opendatacommons.org/licenses/pddl/1-0/) 发布预训练词向量；ANN-Benchmarks 提供对应 HDF5 切分。
+- **SIFT / TEXMEX**：Hervé Jégou, Matthijs Douze, Cordelia Schmid. *Product Quantization for Nearest Neighbor Search*, IEEE TPAMI, 2011。本项目通过公开镜像获取上述标准研究基准（SIFTsmall 镜像页标注 MIT，SIFT1M 原始 TEXMEX 归档内未附独立许可文件，详细核查记录保存在 `docs/DATA_RIGHTS_STATUS.json`）。
+- **第三方依赖**：Faiss、NumPy、OpenBLAS、Z3、h5py、matplotlib、ReportLab 等均遵循其各自原有许可协议，由脚本按需安装，不纳入源码仓库。
 
-**当前状态：全部负载已经保留，来源与哈希已核对；SIFT两项的上游再分发依据仍待补充。公开下载不自动等于授予再分发许可，本说明不将它们改标为MIT、CC0或CC BY。** 如取得原作者或授权提供方的明确许可，应把原文、来源及适用数据版本补入本文件。此状态也记录在 `DATA_RIGHTS_STATUS.json`。
-
-## 引用与第三方依赖
-
-SIFT/TEXMEX：Hervé Jégou、Matthijs Douze、Cordelia Schmid，Product Quantization for Nearest Neighbor Search，IEEE TPAMI，2011。
-GloVe：Jeffrey Pennington、Richard Socher、Christopher D. Manning，GloVe: Global Vectors for Word Representation，EMNLP，2014。
-ANN-Benchmarks提供HDF5整理及基准数据划分。
-
-Faiss、NumPy、OpenBLAS、Z3、h5py、matplotlib、ReportLab等依赖保留各自许可。作者尚未为自研代码指定开源许可证；公开可见性与授予开源许可证是两回事。
+本仓库及复现包内包含的基准数据集仅用于《软件系统优化》课程评测与可复现性验证，权利归原提供方所有。

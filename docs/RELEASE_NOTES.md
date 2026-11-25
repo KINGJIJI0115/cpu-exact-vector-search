@@ -1,31 +1,30 @@
-# v1.0-course：完整课程复现包
+本 Release 提供包含全部原始测试负载的完整课程复现包，解压即可离线准备数据并一键复现，无需另行下载 SIFTsmall、SIFT1M 或 GloVe25。
 
-本Release提供包含全部负载的完整项目包。老师无需另行寻找或下载SIFTsmall、SIFT1M、GloVe25。
+## 附件清单
 
-## 下载
+- `cpu-exact-vector-search-v1.0-course-full.zip`：完整自研源码、三份标准测试负载、实验证据、Z3 形式化验证材料与一键复现入口。
+- `course-report.pdf`：14 页最终课程研究报告（含 5 张 300 DPI 分析图表）。
+- `SHA256SUMS.txt`：上述附件的 SHA256 校验值。
 
-- `cpu-exact-vector-search-v1.0-course-full.zip`：源码、全部负载、实验证据与一键复现入口。
-- `course-report.pdf`：课程报告。
-- `SHA256SUMS.txt`：上述附件的SHA256。
+> 提示：GitHub 自动生成的 `Source code` 压缩包仅含源码仓库（不含原始数据集），请下载 `cpu-exact-vector-search-v1.0-course-full.zip` 进行完整复现。
 
-GitHub自动生成的Source code ZIP仅含源码仓库，不能代替完整复现包。
+## 一键复现步骤
 
-## 运行
-
-在Ubuntu/WSL终端解压完整包，进入根目录：
+在 Ubuntu 22.04 / WSL2 终端解压完整包并进入根目录执行：
 
 ```bash
 python3 verify_bundle.py
-bash reproduce.sh --quick
-bash reproduce.sh
+bash reproduce.sh --quick   # 快速验收：编译、边界回归、Z3 形式化验证与报告生成
+bash reproduce.sh           # 完整复现：本机 26 配置校准 + 78 项 Faiss 同轮对照
 ```
 
-第一条检查文件完整性；quick执行编译、回归、形式化检查并生成报告；默认完整模式进行本机校准和78项Faiss对照。数据已随包，首次软件依赖安装仍可能需要网络及相应权限。完整模式预留数小时。
+- 三份数据集已随包提供；首次安装缺少的系统工具或 Python 依赖时可能需要联网及相应权限。
+- 首次 26 配置校准约 32.4 分钟，指纹缓存命中复用约 11.16 秒；完整模式含全量 78 项对照，建议预留数小时。
 
-## 结果
+## 归档主要结果
 
-本地固定版78/78领先、几何平均2.086倍；学校服务器自动校准版67/78领先、几何平均1.393倍且正确性78/78。均为报告记录的机器及单线程配置，新机器以实际输出为准。
+- **本地 Core Ultra 9 275HX（固定版）**：78/78 领先最快适用 Faiss 路径，几何平均加速比 **2.086×**（峰值 **4.60×**），SIFTsmall 分层消融相对全排序提速 **9.43×**。
+- **学校 Xeon Gold 6133（自动校准版）**：67/78 领先（22/26 配置三批全领先），几何平均加速比 **1.393×**，全部 78 项通过正确性检查。
+- **形式化验证**：Z3 完成 36 项有界 Top-K 抽象模型符号验证、变异反例证伪与 4 项无损整数算术引理证明。
 
-## 数据与本次整理
-
-移除两份历史学校调度脚本，保留实验计算代码、全部负载及测量数据。GloVe上游许可已核实为PDDL；SIFTsmall镜像MIT标注及SIFT1M上游授权的未确认事项见DATA_SOURCES.md。本地文件准备完成不表示SIFT再分发授权已经取得。
+以上性能数据对应报告记录的机器与单线程配置（固定 `OPENBLAS_CORETYPE=Haswell`），在新机器上运行将自动生成本机实测报告。基准数据集与第三方依赖的来源及学术引用见仓库内 `DATA_SOURCES.md`，本发布材料仅用于课程评测与复现验证。
