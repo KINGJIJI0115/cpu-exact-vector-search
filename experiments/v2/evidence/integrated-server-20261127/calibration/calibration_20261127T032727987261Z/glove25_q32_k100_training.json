@@ -1,0 +1,242 @@
+{
+  "selected": {
+    "mode": 7,
+    "block": 256,
+    "n": 1183514,
+    "d": 25,
+    "nq": 32,
+    "k": 100,
+    "kind": "float",
+    "validated": false,
+    "label": "glove25_q32_k100",
+    "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087"
+  },
+  "batches": [
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 120,
+          "ms": 121.470852
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 91.609521
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 91.392912
+        },
+        {
+          "repeat": 1,
+          "method": 120,
+          "ms": 120.966741
+        },
+        {
+          "repeat": 2,
+          "method": 120,
+          "ms": 131.846661
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 95.369791
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 94.148566
+        },
+        {
+          "repeat": 3,
+          "method": 120,
+          "ms": 131.34279
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 92.827198
+        },
+        {
+          "repeat": 4,
+          "method": 120,
+          "ms": 120.740064
+        }
+      ],
+      "medians": {
+        "7": 92.827198,
+        "120": 121.470852
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 1.8368661458545432e-07,
+          "id_recall": 1.0
+        },
+        "120": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 8.812446583572608e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        5836,
+        217,
+        421,
+        208,
+        4186,
+        5875,
+        5935,
+        9589,
+        6097,
+        9275,
+        1101,
+        882,
+        3751,
+        4353,
+        5581,
+        9910,
+        8712,
+        6452,
+        9541,
+        8684,
+        2066,
+        8268,
+        8287,
+        1296,
+        4036,
+        499,
+        2922,
+        2141,
+        5478,
+        5139,
+        9369,
+        7403
+      ],
+      "oracle": {
+        "cache_hits": 32,
+        "queries": 32,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    },
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 120,
+          "ms": 130.604036
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 93.480224
+        },
+        {
+          "repeat": 1,
+          "method": 120,
+          "ms": 120.331582
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 91.620251
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 92.045607
+        },
+        {
+          "repeat": 2,
+          "method": 120,
+          "ms": 120.00255
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 92.291641
+        },
+        {
+          "repeat": 3,
+          "method": 120,
+          "ms": 129.210178
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 93.628605
+        },
+        {
+          "repeat": 4,
+          "method": 120,
+          "ms": 131.322551
+        }
+      ],
+      "medians": {
+        "7": 92.291641,
+        "120": 129.210178
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 1.2500015855732016e-07,
+          "id_recall": 1.0
+        },
+        "120": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 7.581148703250662e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        8359,
+        6319,
+        2972,
+        4414,
+        8447,
+        3309,
+        9537,
+        4580,
+        4368,
+        6800,
+        484,
+        3919,
+        737,
+        4809,
+        743,
+        7172,
+        9897,
+        9531,
+        7788,
+        8299,
+        6306,
+        9207,
+        5337,
+        6399,
+        2375,
+        6718,
+        2766,
+        2885,
+        4549,
+        8143,
+        883,
+        2461
+      ],
+      "oracle": {
+        "cache_hits": 32,
+        "queries": 32,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    }
+  ]
+}

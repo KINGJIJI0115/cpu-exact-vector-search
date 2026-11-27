@@ -1,0 +1,1222 @@
+{
+  "payload": {
+    "schema": 1,
+    "identity": {
+      "machine": "x86_64",
+      "kernel": "5.19.0-32-generic",
+      "cpu": {
+        "vendor_id": "GenuineIntel",
+        "cpu family": "6",
+        "model": "85",
+        "model name": "Intel(R) Xeon(R) Gold 6133 CPU @ 2.50GHz",
+        "stepping": "4",
+        "microcode": "0x2006e05",
+        "flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d arch_capabilities"
+      },
+      "affinity": [
+        19
+      ],
+      "caches": [
+        {
+          "level": "1",
+          "type": "Data",
+          "size": "32K",
+          "coherency_line_size": "64"
+        },
+        {
+          "level": "1",
+          "type": "Instruction",
+          "size": "32K",
+          "coherency_line_size": "64"
+        },
+        {
+          "level": "2",
+          "type": "Unified",
+          "size": "1024K",
+          "coherency_line_size": "64"
+        },
+        {
+          "level": "3",
+          "type": "Unified",
+          "size": "28160K",
+          "coherency_line_size": "64"
+        }
+      ],
+      "threads": 1,
+      "numpy": "2.2.6",
+      "python": [
+        3,
+        10
+      ],
+      "src/autotune_kernels.cpp": "bff9d3419d69ed8b9b479fa4061a95fe8c3597be1722b5984666de8a2758d491",
+      "src/benchmark.cpp": "6e6ebb9c5ec6ce89a4d9d2fa20baeb3c685b39d147d6c6eb9af565af56f11fc5",
+      "build/libautotune.so": "1e1235b8e6f8c684d60f58ec1d77f962a4c46d5997db118c0add953ae89f966e",
+      "adaptive.py": "e0b323d0e4b829dc65c8bd3fc0fb584a2c68b31f987002a5cc007778e32241cb",
+      "build": {
+        "source_sha256": "bff9d3419d69ed8b9b479fa4061a95fe8c3597be1722b5984666de8a2758d491",
+        "flags": [
+          "-std=c++17",
+          "-O3",
+          "-mavx2",
+          "-mfma",
+          "-ffp-contract=off",
+          "-shared",
+          "-fPIC"
+        ],
+        "no_blas_faiss_symbols": true,
+        "scope": "D=128 byte-integer norm/dot identity with original fallback; extra norm array included in index construction",
+        "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+        "library_sha256": "1e1235b8e6f8c684d60f58ec1d77f962a4c46d5997db118c0add953ae89f966e",
+        "candidate_modes": {
+          "200": {
+            "native": 200,
+            "block": 128
+          },
+          "201": {
+            "native": 200,
+            "block": 256
+          },
+          "202": {
+            "native": 200,
+            "block": 512
+          },
+          "203": {
+            "native": 201,
+            "block": 256
+          }
+        }
+      }
+    },
+    "policy_hash": "557d5378ffa100d877d4663b3247c831e1afdfd13ca280a5e997c4c919936430",
+    "entries": {
+      "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25:1183514:25:1:10:float": {
+        "mode": 7,
+        "block": 256,
+        "n": 1183514,
+        "d": 25,
+        "nq": 1,
+        "k": 10,
+        "kind": "float",
+        "validated": true,
+        "label": "glove25_q1_k10",
+        "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087",
+        "validation_gains": [
+          1.0059209332214882,
+          0.9989558765060293
+        ],
+        "training_medians": [
+          {
+            "7": 9.086675,
+            "121": 22.250159
+          },
+          {
+            "7": 8.965561,
+            "121": 21.47624
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/glove25_q1_k10_validation.json"
+      },
+      "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25:1183514:25:1:100:float": {
+        "mode": 7,
+        "block": 256,
+        "n": 1183514,
+        "d": 25,
+        "nq": 1,
+        "k": 100,
+        "kind": "float",
+        "validated": true,
+        "label": "glove25_q1_k100",
+        "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087",
+        "validation_gains": [
+          1.0038994433135286,
+          0.9939541479374561
+        ],
+        "training_medians": [
+          {
+            "7": 9.248118,
+            "121": 22.646207
+          },
+          {
+            "7": 9.114576,
+            "121": 21.584481
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/glove25_q1_k100_validation.json"
+      },
+      "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25:1183514:25:8:10:float": {
+        "mode": 7,
+        "block": 256,
+        "n": 1183514,
+        "d": 25,
+        "nq": 8,
+        "k": 10,
+        "kind": "float",
+        "validated": true,
+        "label": "glove25_q8_k10",
+        "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087",
+        "validation_gains": [
+          1.003211604192655,
+          0.9957018099542353
+        ],
+        "training_medians": [
+          {
+            "7": 26.030266,
+            "120": 35.780196
+          },
+          {
+            "7": 25.33286,
+            "120": 33.144922
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/glove25_q8_k10_validation.json"
+      },
+      "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25:1183514:25:8:100:float": {
+        "mode": 7,
+        "block": 256,
+        "n": 1183514,
+        "d": 25,
+        "nq": 8,
+        "k": 100,
+        "kind": "float",
+        "validated": true,
+        "label": "glove25_q8_k100",
+        "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087",
+        "validation_gains": [
+          1.0026960927815542,
+          0.9920959774275799
+        ],
+        "training_medians": [
+          {
+            "7": 26.842504,
+            "120": 34.97901
+          },
+          {
+            "7": 26.665245,
+            "120": 34.418768
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/glove25_q8_k100_validation.json"
+      },
+      "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25:1183514:25:32:10:float": {
+        "mode": 7,
+        "block": 256,
+        "n": 1183514,
+        "d": 25,
+        "nq": 32,
+        "k": 10,
+        "kind": "float",
+        "validated": true,
+        "label": "glove25_q32_k10",
+        "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087",
+        "validation_gains": [
+          0.9868513477516794,
+          1.0009878080591212
+        ],
+        "training_medians": [
+          {
+            "7": 86.750492,
+            "120": 114.736199
+          },
+          {
+            "7": 85.634294,
+            "120": 120.58747
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/glove25_q32_k10_validation.json"
+      },
+      "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25:1183514:25:32:100:float": {
+        "mode": 7,
+        "block": 256,
+        "n": 1183514,
+        "d": 25,
+        "nq": 32,
+        "k": 100,
+        "kind": "float",
+        "validated": true,
+        "label": "glove25_q32_k100",
+        "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087",
+        "validation_gains": [
+          0.9745676829097248,
+          1.0111149338445249
+        ],
+        "training_medians": [
+          {
+            "7": 92.827198,
+            "120": 121.470852
+          },
+          {
+            "7": 92.291641,
+            "120": 129.210178
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/glove25_q32_k100_validation.json"
+      },
+      "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25:1183514:25:128:10:float": {
+        "mode": 7,
+        "block": 256,
+        "n": 1183514,
+        "d": 25,
+        "nq": 128,
+        "k": 10,
+        "kind": "float",
+        "validated": true,
+        "label": "glove25_q128_k10",
+        "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087",
+        "validation_gains": [
+          0.9984852063797511,
+          0.9950906996087835
+        ],
+        "training_medians": [
+          {
+            "7": 332.404137,
+            "120": 470.04438
+          },
+          {
+            "7": 336.220254,
+            "120": 457.602601
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/glove25_q128_k10_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:1:1:byte": {
+        "mode": 100,
+        "block": 256,
+        "n": 1000000,
+        "d": 128,
+        "nq": 1,
+        "k": 1,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q1_k1",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.3034213141745938,
+          1.3512039499069286
+        ],
+        "training_medians": [
+          {
+            "7": 14.113208,
+            "100": 10.580705
+          },
+          {
+            "7": 14.521872,
+            "100": 10.862264
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q1_k1_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:1:10:byte": {
+        "mode": 100,
+        "block": 256,
+        "n": 1000000,
+        "d": 128,
+        "nq": 1,
+        "k": 10,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q1_k10",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.2834447875169548,
+          1.312272345012596
+        ],
+        "training_medians": [
+          {
+            "7": 13.693176,
+            "100": 10.497037
+          },
+          {
+            "7": 14.158315,
+            "100": 10.830231
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q1_k10_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:1:100:byte": {
+        "mode": 100,
+        "block": 256,
+        "n": 1000000,
+        "d": 128,
+        "nq": 1,
+        "k": 100,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q1_k100",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.2951518981733041,
+          1.3068336989615732
+        ],
+        "training_medians": [
+          {
+            "7": 13.88513,
+            "100": 10.668783
+          },
+          {
+            "7": 14.238292,
+            "100": 10.874731
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q1_k100_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:2:10:byte": {
+        "mode": 100,
+        "block": 256,
+        "n": 1000000,
+        "d": 128,
+        "nq": 2,
+        "k": 10,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q2_k10",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.303691768766249,
+          1.0732783780874422
+        ],
+        "training_medians": [
+          {
+            "7": 22.917964,
+            "100": 17.769577,
+            "110": 20.388511,
+            "101": 19.903735
+          },
+          {
+            "7": 23.697016,
+            "100": 17.806652,
+            "110": 20.210472,
+            "101": 20.082963
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q2_k10_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:4:10:byte": {
+        "mode": 7,
+        "block": 256,
+        "n": 1000000,
+        "d": 128,
+        "nq": 4,
+        "k": 10,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q4_k10",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          0.9490289432983374,
+          0.9896173154993495
+        ],
+        "training_medians": [
+          {
+            "7": 32.150838,
+            "100": 31.562928,
+            "110": 31.638188,
+            "101": 40.175855,
+            "111": 38.206162,
+            "102": 34.188963
+          },
+          {
+            "7": 31.796223,
+            "100": 31.955578,
+            "110": 32.52964,
+            "101": 40.29837,
+            "111": 40.138947,
+            "102": 33.87096
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q4_k10_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:8:1:byte": {
+        "mode": 202,
+        "block": 512,
+        "n": 1000000,
+        "d": 128,
+        "nq": 8,
+        "k": 1,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q8_k1",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.155435998566025,
+          1.1587682487179063
+        ],
+        "training_medians": [
+          {
+            "7": 58.094521,
+            "100": 61.318191,
+            "110": 57.825927,
+            "101": 73.219282,
+            "111": 68.17944,
+            "102": 62.864852,
+            "112": 58.501332,
+            "103": 70.297165,
+            "200": 49.7347,
+            "201": 49.859173,
+            "202": 47.711293,
+            "203": 50.10987
+          },
+          {
+            "7": 55.671882,
+            "100": 58.200413,
+            "110": 57.789905,
+            "101": 75.538563,
+            "111": 71.745616,
+            "102": 62.434555,
+            "112": 58.886622,
+            "103": 70.1156,
+            "200": 47.59173,
+            "201": 47.438433,
+            "202": 48.689004,
+            "203": 49.928906
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q8_k1_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:8:10:byte": {
+        "mode": 202,
+        "block": 512,
+        "n": 1000000,
+        "d": 128,
+        "nq": 8,
+        "k": 10,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q8_k10",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.1529101909888662,
+          1.1638251686671683
+        ],
+        "training_medians": [
+          {
+            "7": 57.962671,
+            "100": 61.168379,
+            "110": 57.279296,
+            "101": 74.279086,
+            "111": 73.068441,
+            "102": 65.289104,
+            "112": 62.388355,
+            "103": 77.779253,
+            "200": 50.006794,
+            "201": 50.213911,
+            "202": 49.936032,
+            "203": 53.022783
+          },
+          {
+            "7": 57.509461,
+            "100": 61.726959,
+            "110": 56.345049,
+            "101": 74.921972,
+            "111": 67.892647,
+            "102": 62.798184,
+            "112": 58.227649,
+            "103": 69.820838,
+            "200": 49.958855,
+            "201": 48.718144,
+            "202": 47.535155,
+            "203": 49.775974
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q8_k10_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:8:100:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 8,
+        "k": 100,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q8_k100",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.117797746294566,
+          1.1493134291632798
+        ],
+        "training_medians": [
+          {
+            "7": 57.028252,
+            "100": 58.505612,
+            "110": 57.140497,
+            "101": 79.066841,
+            "111": 69.960832,
+            "102": 68.640295,
+            "112": 59.977991,
+            "103": 74.264822,
+            "200": 50.275758,
+            "201": 49.018759,
+            "202": 48.896528,
+            "203": 52.097158
+          },
+          {
+            "7": 57.456573,
+            "100": 58.648706,
+            "110": 61.553648,
+            "101": 75.980567,
+            "111": 69.900435,
+            "102": 63.495493,
+            "112": 63.663966,
+            "103": 72.061297,
+            "200": 49.428925,
+            "201": 52.715581,
+            "202": 51.726087,
+            "203": 53.524532
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q8_k100_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:32:1:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 32,
+        "k": 1,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q32_k1",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.1436132667456345,
+          1.167063389983706
+        ],
+        "training_medians": [
+          {
+            "7": 205.721836,
+            "100": 227.642398,
+            "110": 202.854535,
+            "101": 295.433752,
+            "111": 267.621402,
+            "102": 254.014922,
+            "112": 214.091084,
+            "103": 286.483495,
+            "200": 174.903925,
+            "201": 177.279044,
+            "202": 178.991728,
+            "203": 178.758437
+          },
+          {
+            "7": 201.492426,
+            "100": 219.013926,
+            "110": 214.876251,
+            "101": 289.568769,
+            "111": 259.239941,
+            "102": 257.91125,
+            "112": 220.550811,
+            "103": 295.525054,
+            "200": 171.977633,
+            "201": 173.176486,
+            "202": 177.979728,
+            "203": 190.325607
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q32_k1_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:32:10:byte": {
+        "mode": 201,
+        "block": 256,
+        "n": 1000000,
+        "d": 128,
+        "nq": 32,
+        "k": 10,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q32_k10",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.2007734043763396,
+          1.2493324574398423
+        ],
+        "training_medians": [
+          {
+            "7": 209.685081,
+            "100": 220.986028,
+            "110": 212.863642,
+            "101": 295.192569,
+            "111": 261.369442,
+            "102": 257.678693,
+            "112": 217.628994,
+            "103": 285.486754,
+            "200": 178.887086,
+            "201": 178.552512,
+            "202": 182.559856,
+            "203": 179.17353
+          },
+          {
+            "7": 212.903159,
+            "100": 222.625153,
+            "110": 205.666839,
+            "101": 290.787099,
+            "111": 256.186875,
+            "102": 255.452019,
+            "112": 228.714488,
+            "103": 294.904517,
+            "200": 173.913235,
+            "201": 171.783466,
+            "202": 171.744423,
+            "203": 177.953893
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q32_k10_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:32:100:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 32,
+        "k": 100,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q32_k100",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.23549636906067,
+          1.2088256769395007
+        ],
+        "training_medians": [
+          {
+            "7": 206.813022,
+            "100": 227.593553,
+            "110": 215.140779,
+            "101": 296.415736,
+            "111": 269.012587,
+            "102": 261.894093,
+            "112": 236.201358,
+            "103": 266.159135,
+            "200": 176.422499,
+            "201": 176.249099,
+            "202": 176.812066,
+            "203": 189.441
+          },
+          {
+            "7": 207.559455,
+            "100": 221.098575,
+            "110": 219.912296,
+            "101": 293.721679,
+            "111": 269.840553,
+            "102": 261.02917,
+            "112": 221.282062,
+            "103": 293.746005,
+            "200": 176.361323,
+            "201": 184.68067,
+            "202": 176.527745,
+            "203": 196.532027
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q32_k100_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:32:1000:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 32,
+        "k": 1000,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q32_k1000",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.149190895279794,
+          1.155616515440369
+        ],
+        "training_medians": [
+          {
+            "7": 255.325624,
+            "100": 274.327494,
+            "110": 242.45525,
+            "101": 346.05865,
+            "111": 318.886668,
+            "102": 310.749546,
+            "112": 275.571255,
+            "103": 302.90968,
+            "200": 228.44137,
+            "201": 236.769735,
+            "202": 234.656071,
+            "203": 247.510735
+          },
+          {
+            "7": 261.391231,
+            "100": 263.709007,
+            "110": 253.277024,
+            "101": 347.328773,
+            "111": 312.883864,
+            "102": 306.40594,
+            "112": 285.922317,
+            "103": 299.999882,
+            "200": 228.897258,
+            "201": 231.64715,
+            "202": 227.194903,
+            "203": 243.919078
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q32_k1000_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:128:1:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 128,
+        "k": 1,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q128_k1",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.1891692819662167,
+          1.1948896121755093
+        ],
+        "training_medians": [
+          {
+            "7": 802.919103,
+            "100": 882.014391,
+            "110": 818.534145,
+            "101": 1166.176614,
+            "111": 998.61046,
+            "102": 1020.863363,
+            "112": 860.241663,
+            "103": 1157.91031,
+            "200": 669.757851,
+            "201": 676.488427,
+            "202": 687.017411,
+            "203": 711.647377
+          },
+          {
+            "7": 801.999839,
+            "100": 881.053617,
+            "110": 812.045909,
+            "101": 1163.623713,
+            "111": 997.750797,
+            "102": 1016.363879,
+            "112": 873.858038,
+            "103": 1155.026199,
+            "200": 666.850236,
+            "201": 677.839532,
+            "202": 693.338881,
+            "203": 715.577334
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q128_k1_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:128:5:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 128,
+        "k": 5,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q128_k5",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.1849385589389831,
+          1.2039912717101422
+        ],
+        "training_medians": [
+          {
+            "7": 809.430199,
+            "100": 883.081693,
+            "110": 814.229348,
+            "101": 1164.732007,
+            "111": 1001.297392,
+            "102": 1020.041575,
+            "112": 864.709676,
+            "103": 1163.180507,
+            "200": 670.429728,
+            "201": 693.070401,
+            "202": 689.297159,
+            "203": 702.673224
+          },
+          {
+            "7": 833.967399,
+            "100": 906.354315,
+            "110": 840.390202,
+            "101": 1205.10401,
+            "111": 1033.151813,
+            "102": 1050.389837,
+            "112": 900.956603,
+            "103": 1199.48159,
+            "200": 691.186673,
+            "201": 705.734214,
+            "202": 712.567203,
+            "203": 744.973233
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q128_k5_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:128:10:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 128,
+        "k": 10,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q128_k10",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.1873491631595017,
+          1.1799749716913157
+        ],
+        "training_medians": [
+          {
+            "7": 825.880552,
+            "100": 900.113132,
+            "110": 817.687928,
+            "101": 1197.427273,
+            "111": 999.703914,
+            "102": 1051.373097,
+            "112": 895.138333,
+            "103": 1149.26091,
+            "200": 690.178036,
+            "201": 694.812066,
+            "202": 703.070765,
+            "203": 728.52025
+          },
+          {
+            "7": 801.625124,
+            "100": 882.529601,
+            "110": 807.120939,
+            "101": 1161.602388,
+            "111": 1000.939859,
+            "102": 1019.827416,
+            "112": 871.192533,
+            "103": 1156.801586,
+            "200": 671.140568,
+            "201": 681.540101,
+            "202": 696.760394,
+            "203": 705.512921
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q128_k10_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:128:50:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 128,
+        "k": 50,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q128_k50",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.192908905096996,
+          1.2092095567112469
+        ],
+        "training_medians": [
+          {
+            "7": 817.376755,
+            "100": 889.214868,
+            "110": 820.396649,
+            "101": 1168.042631,
+            "111": 1009.381987,
+            "102": 1024.438222,
+            "112": 886.14147,
+            "103": 1167.900083,
+            "200": 686.49293,
+            "201": 688.248451,
+            "202": 693.339117,
+            "203": 737.7846
+          },
+          {
+            "7": 811.658576,
+            "100": 887.424778,
+            "110": 817.160881,
+            "101": 1174.589729,
+            "111": 1012.193564,
+            "102": 1031.086441,
+            "112": 884.385078,
+            "103": 1173.704953,
+            "200": 680.246743,
+            "201": 696.856009,
+            "202": 702.009094,
+            "203": 733.573173
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q128_k50_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:128:100:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 128,
+        "k": 100,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q128_k100",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.1866185218796468,
+          1.202485089865999
+        ],
+        "training_medians": [
+          {
+            "7": 821.390474,
+            "100": 900.496536,
+            "110": 826.517656,
+            "101": 1181.574114,
+            "111": 1024.609077,
+            "102": 1040.937217,
+            "112": 889.654796,
+            "103": 1010.820453,
+            "200": 693.376069,
+            "201": 711.942752,
+            "202": 698.005481,
+            "203": 739.390632
+          },
+          {
+            "7": 830.446697,
+            "100": 894.312684,
+            "110": 826.650665,
+            "101": 1180.679678,
+            "111": 1019.647517,
+            "102": 1041.408286,
+            "112": 894.13331,
+            "103": 1013.717305,
+            "200": 689.187245,
+            "201": 708.607471,
+            "202": 705.306951,
+            "203": 751.60248
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q128_k100_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:256:10:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 256,
+        "k": 10,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q256_k10",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.2229169951306844,
+          1.2161259185229378
+        ],
+        "training_medians": [
+          {
+            "7": 1644.965397,
+            "100": 1808.294177,
+            "110": 1709.210447,
+            "101": 2365.081663,
+            "111": 2068.802331,
+            "102": 2050.430101,
+            "112": 1793.715586,
+            "103": 2281.762193,
+            "200": 1352.365197,
+            "201": 1381.377227,
+            "202": 1391.238904,
+            "203": 1479.207085
+          },
+          {
+            "7": 1695.971311,
+            "100": 1865.872903,
+            "110": 1726.406765,
+            "101": 2453.516811,
+            "111": 2140.047127,
+            "102": 2129.200436,
+            "112": 1852.617001,
+            "103": 2073.550649,
+            "200": 1398.14075,
+            "201": 1420.866058,
+            "202": 1457.084261,
+            "203": 1530.416005
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q256_k10_validation.json"
+      },
+      "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6:1000000:128:256:100:byte": {
+        "mode": 200,
+        "block": 128,
+        "n": 1000000,
+        "d": 128,
+        "nq": 256,
+        "k": 100,
+        "kind": "byte",
+        "validated": true,
+        "label": "sift1m_q256_k100",
+        "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+        "validation_gains": [
+          1.1868812684549996,
+          1.1807124948368155
+        ],
+        "training_medians": [
+          {
+            "7": 1755.374708,
+            "100": 1895.945042,
+            "110": 1788.194615,
+            "101": 2500.434,
+            "111": 2205.588324,
+            "102": 2169.864953,
+            "112": 1912.825369,
+            "103": 2116.639037,
+            "200": 1448.517991,
+            "201": 1498.605375,
+            "202": 1502.746143,
+            "203": 1588.130835
+          },
+          {
+            "7": 1668.971246,
+            "100": 1790.111738,
+            "110": 1640.86255,
+            "101": 2411.676223,
+            "111": 2043.433037,
+            "102": 2121.838127,
+            "112": 1762.070838,
+            "103": 2053.407066,
+            "200": 1407.537699,
+            "201": 1375.918532,
+            "202": 1369.068079,
+            "203": 1474.416254
+          }
+        ],
+        "evidence": "results/calibration_20261127T032727987261Z/sift1m_q256_k100_validation.json"
+      }
+    },
+    "complete": true,
+    "coverage": [
+      [
+        "glove25",
+        1,
+        10
+      ],
+      [
+        "glove25",
+        1,
+        100
+      ],
+      [
+        "glove25",
+        8,
+        10
+      ],
+      [
+        "glove25",
+        8,
+        100
+      ],
+      [
+        "glove25",
+        32,
+        10
+      ],
+      [
+        "glove25",
+        32,
+        100
+      ],
+      [
+        "glove25",
+        128,
+        10
+      ],
+      [
+        "sift1m",
+        1,
+        1
+      ],
+      [
+        "sift1m",
+        1,
+        10
+      ],
+      [
+        "sift1m",
+        1,
+        100
+      ],
+      [
+        "sift1m",
+        2,
+        10
+      ],
+      [
+        "sift1m",
+        4,
+        10
+      ],
+      [
+        "sift1m",
+        8,
+        1
+      ],
+      [
+        "sift1m",
+        8,
+        10
+      ],
+      [
+        "sift1m",
+        8,
+        100
+      ],
+      [
+        "sift1m",
+        32,
+        1
+      ],
+      [
+        "sift1m",
+        32,
+        10
+      ],
+      [
+        "sift1m",
+        32,
+        100
+      ],
+      [
+        "sift1m",
+        32,
+        1000
+      ],
+      [
+        "sift1m",
+        128,
+        1
+      ],
+      [
+        "sift1m",
+        128,
+        5
+      ],
+      [
+        "sift1m",
+        128,
+        10
+      ],
+      [
+        "sift1m",
+        128,
+        50
+      ],
+      [
+        "sift1m",
+        128,
+        100
+      ],
+      [
+        "sift1m",
+        256,
+        10
+      ],
+      [
+        "sift1m",
+        256,
+        100
+      ]
+    ]
+  },
+  "sha256": "41005371150dcf7fbec53f3693ea954ef61b0c0f566bf6174f6a517851e7c3ba"
+}

@@ -1,0 +1,180 @@
+{
+  "selected": {
+    "mode": 7,
+    "block": 256,
+    "n": 1000000,
+    "d": 128,
+    "nq": 1,
+    "k": 100,
+    "kind": "byte",
+    "validated": false,
+    "label": "sift1m_q1_k100",
+    "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f"
+  },
+  "batches": [
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 100,
+          "ms": 7.895784
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 5.304775
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 4.775554
+        },
+        {
+          "repeat": 1,
+          "method": 100,
+          "ms": 7.359466
+        },
+        {
+          "repeat": 2,
+          "method": 100,
+          "ms": 8.28019
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 5.146844
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 5.551234
+        },
+        {
+          "repeat": 3,
+          "method": 100,
+          "ms": 7.161642
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 5.809885
+        },
+        {
+          "repeat": 4,
+          "method": 100,
+          "ms": 6.927832
+        }
+      ],
+      "medians": {
+        "7": 5.304775,
+        "100": 7.359466
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "100": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        5836
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    },
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 100,
+          "ms": 8.000126
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 5.466151
+        },
+        {
+          "repeat": 1,
+          "method": 100,
+          "ms": 6.423547
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 5.612333
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 5.304081
+        },
+        {
+          "repeat": 2,
+          "method": 100,
+          "ms": 7.16646
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 5.683064
+        },
+        {
+          "repeat": 3,
+          "method": 100,
+          "ms": 6.938583
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 5.940897
+        },
+        {
+          "repeat": 4,
+          "method": 100,
+          "ms": 9.424325
+        }
+      ],
+      "medians": {
+        "7": 5.612333,
+        "100": 7.16646
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "100": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        8359
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    }
+  ]
+}

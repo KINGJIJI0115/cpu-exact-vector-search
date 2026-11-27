@@ -1,0 +1,86 @@
+{
+  "machine": "x86_64",
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "cpu": {
+    "vendor_id": "GenuineIntel",
+    "cpu family": "6",
+    "model": "198",
+    "model name": "Intel(R) Core(TM) Ultra 9 275HX",
+    "stepping": "2",
+    "microcode": "0xffffffff",
+    "flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities"
+  },
+  "affinity": [
+    0
+  ],
+  "caches": [
+    {
+      "level": "1",
+      "type": "Data",
+      "size": "48K",
+      "coherency_line_size": "64"
+    },
+    {
+      "level": "1",
+      "type": "Instruction",
+      "size": "64K",
+      "coherency_line_size": "64"
+    },
+    {
+      "level": "2",
+      "type": "Unified",
+      "size": "3072K",
+      "coherency_line_size": "64"
+    },
+    {
+      "level": "3",
+      "type": "Unified",
+      "size": "36864K",
+      "coherency_line_size": "64"
+    }
+  ],
+  "threads": 1,
+  "numpy": "2.2.6",
+  "python": [
+    3,
+    10
+  ],
+  "src/autotune_kernels.cpp": "bff9d3419d69ed8b9b479fa4061a95fe8c3597be1722b5984666de8a2758d491",
+  "src/benchmark.cpp": "6e6ebb9c5ec6ce89a4d9d2fa20baeb3c685b39d147d6c6eb9af565af56f11fc5",
+  "build/libautotune.so": "81a128e83d3ee2679e5954c69b3cbdf01892716f21d835d9d307b8c6d4c7c9ba",
+  "adaptive.py": "e0b323d0e4b829dc65c8bd3fc0fb584a2c68b31f987002a5cc007778e32241cb",
+  "build": {
+    "source_sha256": "bff9d3419d69ed8b9b479fa4061a95fe8c3597be1722b5984666de8a2758d491",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-mavx2",
+      "-mfma",
+      "-ffp-contract=off",
+      "-shared",
+      "-fPIC"
+    ],
+    "no_blas_faiss_symbols": true,
+    "scope": "D=128 byte-integer norm/dot identity with original fallback; extra norm array included in index construction",
+    "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "library_sha256": "81a128e83d3ee2679e5954c69b3cbdf01892716f21d835d9d307b8c6d4c7c9ba",
+    "candidate_modes": {
+      "200": {
+        "native": 200,
+        "block": 128
+      },
+      "201": {
+        "native": 200,
+        "block": 256
+      },
+      "202": {
+        "native": 200,
+        "block": 512
+      },
+      "203": {
+        "native": 201,
+        "block": 256
+      }
+    }
+  }
+}

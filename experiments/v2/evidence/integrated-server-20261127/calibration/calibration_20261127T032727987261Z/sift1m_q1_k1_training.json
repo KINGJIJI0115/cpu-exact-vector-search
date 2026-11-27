@@ -1,0 +1,180 @@
+{
+  "selected": {
+    "mode": 100,
+    "block": 256,
+    "n": 1000000,
+    "d": 128,
+    "nq": 1,
+    "k": 1,
+    "kind": "byte",
+    "validated": false,
+    "label": "sift1m_q1_k1",
+    "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f"
+  },
+  "batches": [
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 100,
+          "ms": 10.580705
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 14.227244
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 14.123781
+        },
+        {
+          "repeat": 1,
+          "method": 100,
+          "ms": 10.791694
+        },
+        {
+          "repeat": 2,
+          "method": 100,
+          "ms": 10.64721
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 14.113208
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 14.074296
+        },
+        {
+          "repeat": 3,
+          "method": 100,
+          "ms": 10.502141
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 14.08899
+        },
+        {
+          "repeat": 4,
+          "method": 100,
+          "ms": 10.54247
+        }
+      ],
+      "medians": {
+        "7": 14.113208,
+        "100": 10.580705
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "100": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        5836
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    },
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 100,
+          "ms": 10.983413
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 14.521872
+        },
+        {
+          "repeat": 1,
+          "method": 100,
+          "ms": 11.18192
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 14.786502
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 14.597216
+        },
+        {
+          "repeat": 2,
+          "method": 100,
+          "ms": 10.862264
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 14.147503
+        },
+        {
+          "repeat": 3,
+          "method": 100,
+          "ms": 10.714336
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 14.276455
+        },
+        {
+          "repeat": 4,
+          "method": 100,
+          "ms": 10.80497
+        }
+      ],
+      "medians": {
+        "7": 14.521872,
+        "100": 10.862264
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "100": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        8359
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    }
+  ]
+}

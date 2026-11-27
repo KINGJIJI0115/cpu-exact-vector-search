@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "cases": 78,
+  "profile_entries": 26,
+  "correctness_methods": "all passed",
+  "frozen_source_and_profile_hashes": "matched",
+  "library": "binary hash matched build record; binary regenerated on reproduction"
+}

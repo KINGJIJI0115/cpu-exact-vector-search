@@ -1,5 +1,7 @@
 # 面向批量精确向量检索的 CPU 跨层性能优化
 
+> 当前开发分支新增了v2整数内积自动校准实验。原v1.0-course发布内容继续保留；新实验见[运行说明](autotune_v2/README.md)和[两机完整对比结果](autotune_v2/RESULTS.md)。
+
 **课程完整材料：** [完整复现 ZIP（含全部负载）](https://github.com/KINGJIJI0115/cpu-exact-vector-search/releases/download/v1.0-course/cpu-exact-vector-search-v1.0-course-full.zip) · [14 页课程报告 PDF](https://github.com/KINGJIJI0115/cpu-exact-vector-search/releases/download/v1.0-course/course-report.pdf) · [Release 页面 (`v1.0-course`)](https://github.com/KINGJIJI0115/cpu-exact-vector-search/releases/tag/v1.0-course)
 
 作者：赵信喆（软件系统优化课程项目）

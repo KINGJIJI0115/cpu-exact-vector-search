@@ -1,0 +1,230 @@
+[
+  {
+    "raw": [
+      {
+        "repeat": 0,
+        "method": "original",
+        "ms": 68.32557
+      },
+      {
+        "repeat": 0,
+        "method": "selected",
+        "ms": 58.424451
+      },
+      {
+        "repeat": 1,
+        "method": "original",
+        "ms": 68.577281
+      },
+      {
+        "repeat": 1,
+        "method": "selected",
+        "ms": 57.357616
+      },
+      {
+        "repeat": 2,
+        "method": "selected",
+        "ms": 57.742893
+      },
+      {
+        "repeat": 2,
+        "method": "original",
+        "ms": 67.816186
+      },
+      {
+        "repeat": 3,
+        "method": "selected",
+        "ms": 57.316325
+      },
+      {
+        "repeat": 3,
+        "method": "original",
+        "ms": 66.742365
+      },
+      {
+        "repeat": 4,
+        "method": "original",
+        "ms": 66.753274
+      },
+      {
+        "repeat": 4,
+        "method": "selected",
+        "ms": 56.884235
+      }
+    ],
+    "medians": {
+      "selected": 57.357616,
+      "original": 67.816186
+    },
+    "validation": {
+      "selected": {
+        "correct": true,
+        "exact": true,
+        "max_distance_error": 0.0,
+        "id_recall": 1.0
+      },
+      "original": {
+        "correct": true,
+        "exact": true,
+        "max_distance_error": 0.0,
+        "id_recall": 1.0
+      }
+    },
+    "query_indices": [
+      9925,
+      9576,
+      663,
+      7264,
+      638,
+      1337,
+      8806,
+      7012,
+      9222,
+      5960,
+      7602,
+      687,
+      8920,
+      9414,
+      2504,
+      9764,
+      631,
+      7389,
+      5154,
+      5019,
+      5752,
+      5934,
+      2358,
+      8181,
+      3900,
+      4760,
+      7652,
+      780,
+      2437,
+      4858,
+      3393,
+      434
+    ],
+    "oracle": {
+      "cache_hits": 32,
+      "queries": 32,
+      "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+      "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+      "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+    },
+    "gain": 1.1823396913846629
+  },
+  {
+    "raw": [
+      {
+        "repeat": 0,
+        "method": "original",
+        "ms": 71.096666
+      },
+      {
+        "repeat": 0,
+        "method": "selected",
+        "ms": 60.421175
+      },
+      {
+        "repeat": 1,
+        "method": "selected",
+        "ms": 59.958995
+      },
+      {
+        "repeat": 1,
+        "method": "original",
+        "ms": 68.021374
+      },
+      {
+        "repeat": 2,
+        "method": "original",
+        "ms": 68.282403
+      },
+      {
+        "repeat": 2,
+        "method": "selected",
+        "ms": 57.846819
+      },
+      {
+        "repeat": 3,
+        "method": "selected",
+        "ms": 57.406045
+      },
+      {
+        "repeat": 3,
+        "method": "original",
+        "ms": 66.933258
+      },
+      {
+        "repeat": 4,
+        "method": "original",
+        "ms": 67.866441
+      },
+      {
+        "repeat": 4,
+        "method": "selected",
+        "ms": 57.492249
+      }
+    ],
+    "medians": {
+      "selected": 57.846819,
+      "original": 68.021374
+    },
+    "validation": {
+      "selected": {
+        "correct": true,
+        "exact": true,
+        "max_distance_error": 0.0,
+        "id_recall": 1.0
+      },
+      "original": {
+        "correct": true,
+        "exact": true,
+        "max_distance_error": 0.0,
+        "id_recall": 1.0
+      }
+    },
+    "query_indices": [
+      8300,
+      750,
+      8383,
+      1965,
+      3154,
+      4451,
+      9128,
+      1063,
+      673,
+      9458,
+      8828,
+      1801,
+      6043,
+      8296,
+      8985,
+      1560,
+      8729,
+      392,
+      1158,
+      3289,
+      7845,
+      723,
+      2665,
+      3620,
+      3545,
+      8888,
+      7542,
+      2135,
+      8422,
+      7297,
+      439,
+      4590
+    ],
+    "oracle": {
+      "cache_hits": 32,
+      "queries": 32,
+      "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+      "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+      "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+    },
+    "gain": 1.1758878910869757
+  }
+]

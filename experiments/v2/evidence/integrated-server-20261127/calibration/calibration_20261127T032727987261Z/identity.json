@@ -1,0 +1,86 @@
+{
+  "machine": "x86_64",
+  "kernel": "5.19.0-32-generic",
+  "cpu": {
+    "vendor_id": "GenuineIntel",
+    "cpu family": "6",
+    "model": "85",
+    "model name": "Intel(R) Xeon(R) Gold 6133 CPU @ 2.50GHz",
+    "stepping": "4",
+    "microcode": "0x2006e05",
+    "flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d arch_capabilities"
+  },
+  "affinity": [
+    19
+  ],
+  "caches": [
+    {
+      "level": "1",
+      "type": "Data",
+      "size": "32K",
+      "coherency_line_size": "64"
+    },
+    {
+      "level": "1",
+      "type": "Instruction",
+      "size": "32K",
+      "coherency_line_size": "64"
+    },
+    {
+      "level": "2",
+      "type": "Unified",
+      "size": "1024K",
+      "coherency_line_size": "64"
+    },
+    {
+      "level": "3",
+      "type": "Unified",
+      "size": "28160K",
+      "coherency_line_size": "64"
+    }
+  ],
+  "threads": 1,
+  "numpy": "2.2.6",
+  "python": [
+    3,
+    10
+  ],
+  "src/autotune_kernels.cpp": "bff9d3419d69ed8b9b479fa4061a95fe8c3597be1722b5984666de8a2758d491",
+  "src/benchmark.cpp": "6e6ebb9c5ec6ce89a4d9d2fa20baeb3c685b39d147d6c6eb9af565af56f11fc5",
+  "build/libautotune.so": "1e1235b8e6f8c684d60f58ec1d77f962a4c46d5997db118c0add953ae89f966e",
+  "adaptive.py": "e0b323d0e4b829dc65c8bd3fc0fb584a2c68b31f987002a5cc007778e32241cb",
+  "build": {
+    "source_sha256": "bff9d3419d69ed8b9b479fa4061a95fe8c3597be1722b5984666de8a2758d491",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-mavx2",
+      "-mfma",
+      "-ffp-contract=off",
+      "-shared",
+      "-fPIC"
+    ],
+    "no_blas_faiss_symbols": true,
+    "scope": "D=128 byte-integer norm/dot identity with original fallback; extra norm array included in index construction",
+    "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "library_sha256": "1e1235b8e6f8c684d60f58ec1d77f962a4c46d5997db118c0add953ae89f966e",
+    "candidate_modes": {
+      "200": {
+        "native": 200,
+        "block": 128
+      },
+      "201": {
+        "native": 200,
+        "block": 256
+      },
+      "202": {
+        "native": 200,
+        "block": 512
+      },
+      "203": {
+        "native": 201,
+        "block": 256
+      }
+    }
+  }
+}

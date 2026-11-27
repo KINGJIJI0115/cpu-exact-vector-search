@@ -23,3 +23,10 @@ Thumbs.db
 # V2 diagnostic build and raw runs
 /experiments/v2/build/
 /experiments/v2/runs/
+
+# Isolated v2 adaptive integration outputs
+/autotune_v2/build/
+/autotune_v2/results/
+/autotune_v2/profiles/
+/autotune_v2/calibration.lock
+/autotune_v2/src/autotune_kernels.cpp

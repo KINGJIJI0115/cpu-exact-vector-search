@@ -1,0 +1,291 @@
+{
+  "summary": {
+    "label": "glove25_q8_k10_b0",
+    "dataset": "glove25",
+    "q": 8,
+    "k": 10,
+    "batch": 0,
+    "mode": 7,
+    "block": 256,
+    "custom_ms": 25.913295,
+    "original_ms": 26.014058,
+    "best_faiss_method": "faiss_blas",
+    "best_faiss_ms": 53.790464,
+    "gain": 2.0757863482818375,
+    "gain_over_original": 1.003888467290632,
+    "passed": true,
+    "previous_gain": 2.100067079931688,
+    "previous_passed": true
+  },
+  "medians": {
+    "adaptive": 25.913295,
+    "original": 26.014058,
+    "faiss_flat": 117.118078,
+    "faiss_direct": 117.287257,
+    "faiss_blas": 53.790464
+  },
+  "raw": [
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 0,
+      "method": "adaptive",
+      "ms": 25.850915
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 0,
+      "method": "faiss_flat",
+      "ms": 115.663677
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 0,
+      "method": "faiss_direct",
+      "ms": 116.295617
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 0,
+      "method": "original",
+      "ms": 26.423068
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 0,
+      "method": "faiss_blas",
+      "ms": 53.898088
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 1,
+      "method": "faiss_blas",
+      "ms": 53.790464
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 1,
+      "method": "faiss_direct",
+      "ms": 117.287257
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 1,
+      "method": "faiss_flat",
+      "ms": 117.118078
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 1,
+      "method": "adaptive",
+      "ms": 25.913295
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 1,
+      "method": "original",
+      "ms": 26.788186
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 2,
+      "method": "faiss_flat",
+      "ms": 117.918447
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 2,
+      "method": "faiss_blas",
+      "ms": 53.224704
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 2,
+      "method": "adaptive",
+      "ms": 28.114632
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 2,
+      "method": "original",
+      "ms": 25.870081
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 2,
+      "method": "faiss_direct",
+      "ms": 116.600311
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 3,
+      "method": "original",
+      "ms": 25.823267
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 3,
+      "method": "faiss_blas",
+      "ms": 53.511189
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 3,
+      "method": "adaptive",
+      "ms": 25.659162
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 3,
+      "method": "faiss_direct",
+      "ms": 118.010482
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 3,
+      "method": "faiss_flat",
+      "ms": 117.030863
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 4,
+      "method": "adaptive",
+      "ms": 25.818034
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 4,
+      "method": "original",
+      "ms": 26.460235
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 4,
+      "method": "faiss_blas",
+      "ms": 53.831526
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 4,
+      "method": "faiss_direct",
+      "ms": 117.138457
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 4,
+      "method": "faiss_flat",
+      "ms": 117.785327
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 5,
+      "method": "adaptive",
+      "ms": 27.12858
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 5,
+      "method": "faiss_direct",
+      "ms": 118.064594
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 5,
+      "method": "faiss_flat",
+      "ms": 117.184465
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 5,
+      "method": "original",
+      "ms": 25.983227
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 5,
+      "method": "faiss_blas",
+      "ms": 54.61092
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 6,
+      "method": "faiss_direct",
+      "ms": 117.289127
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 6,
+      "method": "original",
+      "ms": 26.014058
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 6,
+      "method": "adaptive",
+      "ms": 25.995898
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 6,
+      "method": "faiss_flat",
+      "ms": 116.132096
+    },
+    {
+      "label": "glove25_q8_k10_b0",
+      "repeat": 6,
+      "method": "faiss_blas",
+      "ms": 53.362784
+    }
+  ],
+  "validation": {
+    "label": "glove25_q8_k10_b0",
+    "query_indices": [
+      2508,
+      4318,
+      2627,
+      4058,
+      3373,
+      2897,
+      1269,
+      1564
+    ],
+    "oracle": {
+      "cache_hits": 8,
+      "queries": 8,
+      "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+      "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+      "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+    },
+    "methods": {
+      "adaptive": {
+        "correct": true,
+        "max_distance_error": 1.0202714451068573e-07,
+        "max_rank_gap": 1.1102230246251565e-16,
+        "id_recall": 1.0
+      },
+      "original": {
+        "correct": true,
+        "max_distance_error": 1.0202714451068573e-07,
+        "max_rank_gap": 1.1102230246251565e-16,
+        "id_recall": 1.0
+      },
+      "faiss_flat": {
+        "correct": true,
+        "max_distance_error": 5.810049052978883e-08,
+        "max_rank_gap": 1.1102230246251565e-16,
+        "id_recall": 1.0
+      },
+      "faiss_direct": {
+        "correct": true,
+        "max_distance_error": 5.810049052978883e-08,
+        "max_rank_gap": 1.1102230246251565e-16,
+        "id_recall": 1.0
+      },
+      "faiss_blas": {
+        "correct": true,
+        "max_distance_error": 4.07829887277833e-07,
+        "max_rank_gap": 1.1102230246251565e-16,
+        "id_recall": 1.0
+      }
+    }
+  }
+}

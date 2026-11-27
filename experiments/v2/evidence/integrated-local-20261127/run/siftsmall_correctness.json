@@ -1,0 +1,442 @@
+{
+  "status": "passed",
+  "dataset": "siftsmall",
+  "n": 10000,
+  "d": 128,
+  "queries": 100,
+  "cases": 48,
+  "checks": [
+    {
+      "q": 1,
+      "k": 1,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 1,
+      "k": 10,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 1,
+      "k": 100,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 1,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 1,
+      "mode": 200,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 1,
+      "mode": 201,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 1,
+      "mode": 202,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 1,
+      "mode": 203,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 10,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 10,
+      "mode": 200,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 10,
+      "mode": 201,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 10,
+      "mode": 202,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 10,
+      "mode": 203,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 100,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 100,
+      "mode": 200,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 100,
+      "mode": 201,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 100,
+      "mode": 202,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 8,
+      "k": 100,
+      "mode": 203,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 1,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 1,
+      "mode": 200,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 1,
+      "mode": 201,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 1,
+      "mode": 202,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 1,
+      "mode": 203,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 10,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 10,
+      "mode": 200,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 10,
+      "mode": 201,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 10,
+      "mode": 202,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 10,
+      "mode": 203,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 100,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 100,
+      "mode": 200,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 100,
+      "mode": 201,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 100,
+      "mode": 202,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 32,
+      "k": 100,
+      "mode": 203,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 1,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 1,
+      "mode": 200,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 1,
+      "mode": 201,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 1,
+      "mode": 202,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 1,
+      "mode": 203,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 10,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 10,
+      "mode": 200,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 10,
+      "mode": 201,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 10,
+      "mode": 202,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 10,
+      "mode": 203,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 100,
+      "mode": 7,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 100,
+      "mode": 200,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 100,
+      "mode": 201,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 100,
+      "mode": 202,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    },
+    {
+      "q": 100,
+      "k": 100,
+      "mode": 203,
+      "correct": true,
+      "exact": true,
+      "max_distance_error": 0.0,
+      "id_recall": 1.0
+    }
+  ]
+}

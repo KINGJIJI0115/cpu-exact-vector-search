@@ -1,0 +1,460 @@
+{
+  "summary": {
+    "label": "sift1m_q128_k5_b1",
+    "dataset": "sift1m",
+    "q": 128,
+    "k": 5,
+    "batch": 1,
+    "mode": 200,
+    "block": 128,
+    "custom_ms": 669.255455,
+    "original_ms": 805.064204,
+    "best_faiss_method": "faiss_blas",
+    "best_faiss_ms": 846.053709,
+    "gain": 1.2641715546420165,
+    "gain_over_original": 1.2029251281933893,
+    "passed": true,
+    "previous_gain": 1.0040484111146821,
+    "previous_passed": true
+  },
+  "medians": {
+    "adaptive": 669.255455,
+    "original": 805.064204,
+    "faiss_flat": 5258.748598,
+    "faiss_direct": 5255.673857,
+    "faiss_blas": 846.053709,
+    "faiss_sq8_direct": 1870.711195
+  },
+  "raw": [
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 0,
+      "method": "faiss_flat",
+      "ms": 5255.9412
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 0,
+      "method": "adaptive",
+      "ms": 660.630686
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 0,
+      "method": "original",
+      "ms": 801.617038
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 0,
+      "method": "faiss_sq8_direct",
+      "ms": 1876.356603
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 0,
+      "method": "faiss_blas",
+      "ms": 840.79796
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 0,
+      "method": "faiss_direct",
+      "ms": 5257.110315
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 1,
+      "method": "adaptive",
+      "ms": 669.255455
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 1,
+      "method": "faiss_sq8_direct",
+      "ms": 1870.069999
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 1,
+      "method": "faiss_direct",
+      "ms": 5258.970167
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 1,
+      "method": "faiss_blas",
+      "ms": 842.409638
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 1,
+      "method": "original",
+      "ms": 797.384587
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 1,
+      "method": "faiss_flat",
+      "ms": 5258.748598
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 2,
+      "method": "faiss_sq8_direct",
+      "ms": 1870.711195
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 2,
+      "method": "faiss_direct",
+      "ms": 5252.136324
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 2,
+      "method": "faiss_blas",
+      "ms": 848.932068
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 2,
+      "method": "faiss_flat",
+      "ms": 5258.073051
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 2,
+      "method": "adaptive",
+      "ms": 671.67351
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 2,
+      "method": "original",
+      "ms": 793.294085
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 3,
+      "method": "faiss_blas",
+      "ms": 846.053709
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 3,
+      "method": "faiss_direct",
+      "ms": 5248.951644
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 3,
+      "method": "faiss_flat",
+      "ms": 5263.874475
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 3,
+      "method": "original",
+      "ms": 806.586614
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 3,
+      "method": "adaptive",
+      "ms": 668.715163
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 3,
+      "method": "faiss_sq8_direct",
+      "ms": 1871.618341
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 4,
+      "method": "original",
+      "ms": 807.530618
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 4,
+      "method": "faiss_blas",
+      "ms": 850.838448
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 4,
+      "method": "faiss_flat",
+      "ms": 5262.2099
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 4,
+      "method": "faiss_sq8_direct",
+      "ms": 1852.773229
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 4,
+      "method": "adaptive",
+      "ms": 684.356184
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 4,
+      "method": "faiss_direct",
+      "ms": 5252.419286
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 5,
+      "method": "faiss_direct",
+      "ms": 5258.419671
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 5,
+      "method": "faiss_sq8_direct",
+      "ms": 1871.685034
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 5,
+      "method": "faiss_flat",
+      "ms": 5252.751323
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 5,
+      "method": "original",
+      "ms": 805.064204
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 5,
+      "method": "adaptive",
+      "ms": 673.660906
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 5,
+      "method": "faiss_blas",
+      "ms": 851.290538
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 6,
+      "method": "faiss_sq8_direct",
+      "ms": 1862.528943
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 6,
+      "method": "faiss_flat",
+      "ms": 5265.802286
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 6,
+      "method": "adaptive",
+      "ms": 665.653307
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 6,
+      "method": "original",
+      "ms": 808.369178
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 6,
+      "method": "faiss_direct",
+      "ms": 5255.673857
+    },
+    {
+      "label": "sift1m_q128_k5_b1",
+      "repeat": 6,
+      "method": "faiss_blas",
+      "ms": 840.766778
+    }
+  ],
+  "validation": {
+    "label": "sift1m_q128_k5_b1",
+    "query_indices": [
+      2602,
+      9209,
+      3690,
+      4624,
+      2429,
+      1584,
+      3402,
+      3965,
+      2485,
+      9519,
+      6455,
+      5317,
+      4513,
+      158,
+      8230,
+      8789,
+      6896,
+      5567,
+      4837,
+      7039,
+      7655,
+      8679,
+      8596,
+      1169,
+      7429,
+      6914,
+      6725,
+      7904,
+      4603,
+      2583,
+      979,
+      8452,
+      2359,
+      5410,
+      3046,
+      6333,
+      3184,
+      9394,
+      8591,
+      8570,
+      5687,
+      7415,
+      2121,
+      6880,
+      8220,
+      3092,
+      2167,
+      3497,
+      400,
+      6386,
+      5832,
+      5186,
+      1563,
+      9068,
+      7348,
+      7595,
+      7706,
+      8603,
+      3739,
+      9728,
+      9661,
+      2425,
+      3209,
+      2302,
+      2273,
+      8413,
+      4865,
+      9756,
+      3323,
+      3416,
+      2528,
+      5515,
+      1858,
+      4280,
+      968,
+      9968,
+      7541,
+      3208,
+      194,
+      2387,
+      4650,
+      7879,
+      4314,
+      4588,
+      8503,
+      2458,
+      8301,
+      2836,
+      2189,
+      8065,
+      459,
+      6193,
+      289,
+      7098,
+      4089,
+      2480,
+      6179,
+      4098,
+      6943,
+      8963,
+      6406,
+      3121,
+      6677,
+      7680,
+      1618,
+      9206,
+      1284,
+      3669,
+      9688,
+      9498,
+      7624,
+      1921,
+      6733,
+      5705,
+      9915,
+      1857,
+      5076,
+      2294,
+      4259,
+      6572,
+      848,
+      4011,
+      9511,
+      9993,
+      5346,
+      4861,
+      4376,
+      9287
+    ],
+    "oracle": {
+      "cache_hits": 128,
+      "queries": 128,
+      "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+      "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+      "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+    },
+    "methods": {
+      "adaptive": {
+        "correct": true,
+        "max_distance_error": 0.0,
+        "max_rank_gap": 0.0,
+        "id_recall": 1.0
+      },
+      "original": {
+        "correct": true,
+        "max_distance_error": 0.0,
+        "max_rank_gap": 0.0,
+        "id_recall": 1.0
+      },
+      "faiss_flat": {
+        "correct": true,
+        "max_distance_error": 0.0,
+        "max_rank_gap": 0.0,
+        "id_recall": 1.0
+      },
+      "faiss_direct": {
+        "correct": true,
+        "max_distance_error": 0.0,
+        "max_rank_gap": 0.0,
+        "id_recall": 1.0
+      },
+      "faiss_blas": {
+        "correct": true,
+        "max_distance_error": 0.0,
+        "max_rank_gap": 0.0,
+        "id_recall": 1.0
+      },
+      "faiss_sq8_direct": {
+        "correct": true,
+        "max_distance_error": 0.0,
+        "max_rank_gap": 0.0,
+        "id_recall": 1.0
+      }
+    }
+  }
+}

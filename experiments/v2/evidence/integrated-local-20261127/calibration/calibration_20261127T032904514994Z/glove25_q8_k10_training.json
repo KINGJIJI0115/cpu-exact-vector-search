@@ -1,0 +1,194 @@
+{
+  "selected": {
+    "mode": 7,
+    "block": 256,
+    "n": 1183514,
+    "d": 25,
+    "nq": 8,
+    "k": 10,
+    "kind": "float",
+    "validated": false,
+    "label": "glove25_q8_k10",
+    "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087"
+  },
+  "batches": [
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 120,
+          "ms": 9.874699
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 6.20816
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 6.419489
+        },
+        {
+          "repeat": 1,
+          "method": 120,
+          "ms": 9.9185
+        },
+        {
+          "repeat": 2,
+          "method": 120,
+          "ms": 9.914288
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 6.343635
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 6.786954
+        },
+        {
+          "repeat": 3,
+          "method": 120,
+          "ms": 10.245818
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 5.924568
+        },
+        {
+          "repeat": 4,
+          "method": 120,
+          "ms": 10.152611
+        }
+      ],
+      "medians": {
+        "7": 6.343635,
+        "120": 9.9185
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 4.5603774090352545e-08,
+          "id_recall": 1.0
+        },
+        "120": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 6.152419779192897e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        5836,
+        217,
+        421,
+        208,
+        4186,
+        5875,
+        5935,
+        9589
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 8,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    },
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 120,
+          "ms": 9.645758
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 6.183042
+        },
+        {
+          "repeat": 1,
+          "method": 120,
+          "ms": 9.66716
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 6.824021
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 6.555816
+        },
+        {
+          "repeat": 2,
+          "method": 120,
+          "ms": 9.916621
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 6.178948
+        },
+        {
+          "repeat": 3,
+          "method": 120,
+          "ms": 10.193348
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 6.201195
+        },
+        {
+          "repeat": 4,
+          "method": 120,
+          "ms": 9.80238
+        }
+      ],
+      "medians": {
+        "7": 6.201195,
+        "120": 9.80238
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 1.127757421892639e-07,
+          "id_recall": 1.0
+        },
+        "120": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 4.367627970403021e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        8359,
+        6319,
+        2972,
+        4414,
+        8447,
+        3309,
+        9537,
+        4580
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 8,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    }
+  ]
+}

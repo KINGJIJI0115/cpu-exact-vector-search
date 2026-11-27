@@ -1,0 +1,310 @@
+{
+  "selected": {
+    "mode": 7,
+    "block": 256,
+    "n": 1000000,
+    "d": 128,
+    "nq": 2,
+    "k": 10,
+    "kind": "byte",
+    "validated": false,
+    "label": "sift1m_q2_k10",
+    "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f"
+  },
+  "batches": [
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 110,
+          "ms": 7.158123
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 5.931693
+        },
+        {
+          "repeat": 0,
+          "method": 101,
+          "ms": 12.395124
+        },
+        {
+          "repeat": 0,
+          "method": 100,
+          "ms": 9.885157
+        },
+        {
+          "repeat": 1,
+          "method": 110,
+          "ms": 7.44047
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 6.334741
+        },
+        {
+          "repeat": 1,
+          "method": 100,
+          "ms": 9.42559
+        },
+        {
+          "repeat": 1,
+          "method": 101,
+          "ms": 9.841178
+        },
+        {
+          "repeat": 2,
+          "method": 110,
+          "ms": 7.24407
+        },
+        {
+          "repeat": 2,
+          "method": 100,
+          "ms": 10.506826
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 6.31023
+        },
+        {
+          "repeat": 2,
+          "method": 101,
+          "ms": 11.792377
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 6.071372
+        },
+        {
+          "repeat": 3,
+          "method": 100,
+          "ms": 10.556833
+        },
+        {
+          "repeat": 3,
+          "method": 101,
+          "ms": 9.177704
+        },
+        {
+          "repeat": 3,
+          "method": 110,
+          "ms": 7.437937
+        },
+        {
+          "repeat": 4,
+          "method": 100,
+          "ms": 11.53747
+        },
+        {
+          "repeat": 4,
+          "method": 110,
+          "ms": 7.490836
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 6.358957
+        },
+        {
+          "repeat": 4,
+          "method": 101,
+          "ms": 12.758182
+        }
+      ],
+      "medians": {
+        "7": 6.31023,
+        "100": 10.506826,
+        "110": 7.437937,
+        "101": 11.792377
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "100": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "110": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "101": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        5836,
+        217
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 2,
+        "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    },
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 110,
+          "ms": 7.165014
+        },
+        {
+          "repeat": 0,
+          "method": 100,
+          "ms": 9.039778
+        },
+        {
+          "repeat": 0,
+          "method": 101,
+          "ms": 12.321656
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 6.803963
+        },
+        {
+          "repeat": 1,
+          "method": 110,
+          "ms": 7.365704
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 6.302033
+        },
+        {
+          "repeat": 1,
+          "method": 100,
+          "ms": 10.516781
+        },
+        {
+          "repeat": 1,
+          "method": 101,
+          "ms": 9.783037
+        },
+        {
+          "repeat": 2,
+          "method": 101,
+          "ms": 9.870614
+        },
+        {
+          "repeat": 2,
+          "method": 110,
+          "ms": 7.811471
+        },
+        {
+          "repeat": 2,
+          "method": 100,
+          "ms": 8.763548
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 6.359521
+        },
+        {
+          "repeat": 3,
+          "method": 101,
+          "ms": 12.364481
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 5.988581
+        },
+        {
+          "repeat": 3,
+          "method": 100,
+          "ms": 9.83306
+        },
+        {
+          "repeat": 3,
+          "method": 110,
+          "ms": 6.977289
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 6.66592
+        },
+        {
+          "repeat": 4,
+          "method": 110,
+          "ms": 7.439545
+        },
+        {
+          "repeat": 4,
+          "method": 101,
+          "ms": 8.910375
+        },
+        {
+          "repeat": 4,
+          "method": 100,
+          "ms": 8.720791
+        }
+      ],
+      "medians": {
+        "7": 6.359521,
+        "100": 9.039778,
+        "110": 7.365704,
+        "101": 9.870614
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "100": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "110": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "101": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        8359,
+        6319
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 2,
+        "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    }
+  ]
+}

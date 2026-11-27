@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "steps": [
+    {
+      "step": "regression",
+      "exit": 0,
+      "seconds": 9.782503459602594
+    },
+    {
+      "step": "calibration",
+      "exit": 0,
+      "seconds": 1668.6189664378762
+    },
+    {
+      "step": "faiss78",
+      "exit": 0,
+      "seconds": 3982.512119313702
+    },
+    {
+      "step": "cache_reuse",
+      "exit": 0,
+      "seconds": 13.868727266788483
+    }
+  ],
+  "cpu": 19
+}

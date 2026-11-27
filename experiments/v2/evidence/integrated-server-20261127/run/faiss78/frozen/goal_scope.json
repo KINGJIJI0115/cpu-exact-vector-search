@@ -1,0 +1,175 @@
+{
+  "objective": "All existing full-database evaluation configurations: custom exact search no slower than fastest measured Faiss path",
+  "datasets": {
+    "sift1m": {
+      "n": 1000000,
+      "d": 128
+    },
+    "glove25": {
+      "n": 1183514,
+      "d": 25
+    }
+  },
+  "configs": [
+    [
+      "glove25",
+      1,
+      10
+    ],
+    [
+      "glove25",
+      1,
+      100
+    ],
+    [
+      "glove25",
+      8,
+      10
+    ],
+    [
+      "glove25",
+      8,
+      100
+    ],
+    [
+      "glove25",
+      32,
+      10
+    ],
+    [
+      "glove25",
+      32,
+      100
+    ],
+    [
+      "glove25",
+      128,
+      10
+    ],
+    [
+      "sift1m",
+      1,
+      1
+    ],
+    [
+      "sift1m",
+      1,
+      10
+    ],
+    [
+      "sift1m",
+      1,
+      100
+    ],
+    [
+      "sift1m",
+      2,
+      10
+    ],
+    [
+      "sift1m",
+      4,
+      10
+    ],
+    [
+      "sift1m",
+      8,
+      1
+    ],
+    [
+      "sift1m",
+      8,
+      10
+    ],
+    [
+      "sift1m",
+      8,
+      100
+    ],
+    [
+      "sift1m",
+      32,
+      1
+    ],
+    [
+      "sift1m",
+      32,
+      10
+    ],
+    [
+      "sift1m",
+      32,
+      100
+    ],
+    [
+      "sift1m",
+      32,
+      1000
+    ],
+    [
+      "sift1m",
+      128,
+      1
+    ],
+    [
+      "sift1m",
+      128,
+      5
+    ],
+    [
+      "sift1m",
+      128,
+      10
+    ],
+    [
+      "sift1m",
+      128,
+      50
+    ],
+    [
+      "sift1m",
+      128,
+      100
+    ],
+    [
+      "sift1m",
+      256,
+      10
+    ],
+    [
+      "sift1m",
+      256,
+      100
+    ]
+  ],
+  "baseline_seed": 20261130,
+  "confirmation_seed": 20261201,
+  "confirmation_batches": 3,
+  "repeats": 7,
+  "pass_rule": "Every configuration and each of 3 disjoint unseen query batches: median(custom) / min(median of all applicable Faiss controls) <=1.0 and correctness passes. SIFT controls: default, direct, BLAS, exact QT_8bit_direct; GloVe controls: default, direct, BLAS. No post-hoc tolerance. Finite measured criterion, not a universal guarantee.",
+  "constraints": [
+    "No BLAS or Faiss calls in custom search",
+    "Preserve exact-search target and existing SIFT/float validation policies",
+    "Same single-thread affinity and timing boundaries",
+    "No background performance runs",
+    "All configurations and failures retained",
+    "Freeze implementation before confirmation; changes invalidate that confirmation",
+    "Preprocessing remains outside query timings with costs recorded, consistently for all methods"
+  ],
+  "revision": 2,
+  "faiss_methods": {
+    "sift1m": [
+      "faiss_flat",
+      "faiss_direct",
+      "faiss_blas",
+      "faiss_sq8_direct"
+    ],
+    "glove25": [
+      "faiss_flat",
+      "faiss_direct",
+      "faiss_blas"
+    ]
+  },
+  "confirmation_excludes_baseline_queries": true,
+  "revision_reason": "Before any final confirmation, add exact-byte Faiss SQ8 direct control to match the new lossless representation; exclude all training query IDs from confirmation. Same 26 configs, 3 disjoint batches, 7 repeats and <=1 median-ratio criterion."
+}

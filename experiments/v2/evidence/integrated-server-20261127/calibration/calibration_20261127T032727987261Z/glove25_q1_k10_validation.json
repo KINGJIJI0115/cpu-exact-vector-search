@@ -1,0 +1,168 @@
+[
+  {
+    "raw": [
+      {
+        "repeat": 0,
+        "method": "original",
+        "ms": 8.951938
+      },
+      {
+        "repeat": 0,
+        "method": "selected",
+        "ms": 9.136939
+      },
+      {
+        "repeat": 1,
+        "method": "original",
+        "ms": 9.173658
+      },
+      {
+        "repeat": 1,
+        "method": "selected",
+        "ms": 8.87205
+      },
+      {
+        "repeat": 2,
+        "method": "selected",
+        "ms": 8.924562
+      },
+      {
+        "repeat": 2,
+        "method": "original",
+        "ms": 9.050838
+      },
+      {
+        "repeat": 3,
+        "method": "selected",
+        "ms": 8.969532
+      },
+      {
+        "repeat": 3,
+        "method": "original",
+        "ms": 8.953018
+      },
+      {
+        "repeat": 4,
+        "method": "original",
+        "ms": 9.02264
+      },
+      {
+        "repeat": 4,
+        "method": "selected",
+        "ms": 9.092481
+      }
+    ],
+    "medians": {
+      "selected": 8.969532,
+      "original": 9.02264
+    },
+    "validation": {
+      "selected": {
+        "correct": true,
+        "exact": false,
+        "max_distance_error": 2.331709506031565e-08,
+        "id_recall": 1.0
+      },
+      "original": {
+        "correct": true,
+        "exact": false,
+        "max_distance_error": 2.331709506031565e-08,
+        "id_recall": 1.0
+      }
+    },
+    "query_indices": [
+      9925
+    ],
+    "oracle": {
+      "cache_hits": 1,
+      "queries": 1,
+      "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+      "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+      "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+    },
+    "gain": 1.0059209332214882
+  },
+  {
+    "raw": [
+      {
+        "repeat": 0,
+        "method": "original",
+        "ms": 9.118525
+      },
+      {
+        "repeat": 0,
+        "method": "selected",
+        "ms": 8.887254
+      },
+      {
+        "repeat": 1,
+        "method": "selected",
+        "ms": 8.92712
+      },
+      {
+        "repeat": 1,
+        "method": "original",
+        "ms": 9.052661
+      },
+      {
+        "repeat": 2,
+        "method": "original",
+        "ms": 8.862274
+      },
+      {
+        "repeat": 2,
+        "method": "selected",
+        "ms": 8.896524
+      },
+      {
+        "repeat": 3,
+        "method": "selected",
+        "ms": 8.826254
+      },
+      {
+        "repeat": 3,
+        "method": "original",
+        "ms": 8.884298
+      },
+      {
+        "repeat": 4,
+        "method": "original",
+        "ms": 8.730153
+      },
+      {
+        "repeat": 4,
+        "method": "selected",
+        "ms": 8.893584
+      }
+    ],
+    "medians": {
+      "selected": 8.893584,
+      "original": 8.884298
+    },
+    "validation": {
+      "selected": {
+        "correct": true,
+        "exact": false,
+        "max_distance_error": 1.2125091208847749e-08,
+        "id_recall": 1.0
+      },
+      "original": {
+        "correct": true,
+        "exact": false,
+        "max_distance_error": 1.2125091208847749e-08,
+        "id_recall": 1.0
+      }
+    },
+    "query_indices": [
+      8300
+    ],
+    "oracle": {
+      "cache_hits": 1,
+      "queries": 1,
+      "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+      "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+      "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+    },
+    "gain": 0.9989558765060293
+  }
+]

@@ -1,0 +1,272 @@
+{
+  "status": "completed",
+  "full_scope": true,
+  "configs": 26,
+  "newly_calibrated": 26,
+  "reused": 0,
+  "seconds": 769.860117493,
+  "profile": "/mnt/d/\u7cfb\u7edf\u4f18\u5316/GitHub\u53d1\u5e03\u7248/repository/autotune_v2/profiles/local.json",
+  "results": [
+    {
+      "label": "glove25_q1_k10",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        1.0622106998717613,
+        1.014278953965695
+      ],
+      "index_setup_seconds": 0.20320568799999705
+    },
+    {
+      "label": "glove25_q1_k100",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        0.9746938146605274,
+        1.0183954002106284
+      ],
+      "index_setup_seconds": 0.20320568799999705
+    },
+    {
+      "label": "glove25_q8_k10",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        0.9896447777450748,
+        1.0233035004084028
+      ],
+      "index_setup_seconds": 0.20320568799999705
+    },
+    {
+      "label": "glove25_q8_k100",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        1.0255715270887087,
+        1.0534747787181866
+      ],
+      "index_setup_seconds": 0.20320568799999705
+    },
+    {
+      "label": "glove25_q32_k10",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        1.0023687761650248,
+        1.013547860807488
+      ],
+      "index_setup_seconds": 0.20320568799999705
+    },
+    {
+      "label": "glove25_q32_k100",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        1.0054889576449675,
+        1.02494749340046
+      ],
+      "index_setup_seconds": 0.20320568799999705
+    },
+    {
+      "label": "glove25_q128_k10",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        1.0081305406688503,
+        1.0017033812933585
+      ],
+      "index_setup_seconds": 0.20320568799999705
+    },
+    {
+      "label": "sift1m_q1_k1",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        1.0108676574908337,
+        1.050266826807722
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q1_k10",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        1.0049925622556235,
+        1.0804429093524457
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q1_k100",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        1.0314123685680379,
+        1.0148372498831946
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q2_k10",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        0.9809625873719112,
+        0.9944421699875591
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q4_k10",
+      "status": "calibrated",
+      "mode": 7,
+      "validation_gains": [
+        0.9810929031851939,
+        0.980119974628468
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q8_k1",
+      "status": "calibrated",
+      "mode": 201,
+      "validation_gains": [
+        1.2802748481680597,
+        1.2507617897729175
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q8_k10",
+      "status": "calibrated",
+      "mode": 202,
+      "validation_gains": [
+        1.1859615309613014,
+        1.2729671265601328
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q8_k100",
+      "status": "calibrated",
+      "mode": 202,
+      "validation_gains": [
+        1.2278359104984031,
+        1.2306116069810413
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q32_k1",
+      "status": "calibrated",
+      "mode": 201,
+      "validation_gains": [
+        1.2826818716268964,
+        1.2836932282767237
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q32_k10",
+      "status": "calibrated",
+      "mode": 202,
+      "validation_gains": [
+        1.272904939097004,
+        1.2976921221122821
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q32_k100",
+      "status": "calibrated",
+      "mode": 202,
+      "validation_gains": [
+        1.296487544281027,
+        1.2550174034526835
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q32_k1000",
+      "status": "calibrated",
+      "mode": 202,
+      "validation_gains": [
+        1.1823396913846629,
+        1.1758878910869757
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q128_k1",
+      "status": "calibrated",
+      "mode": 200,
+      "validation_gains": [
+        1.2901589400846478,
+        1.2978760895287633
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q128_k5",
+      "status": "calibrated",
+      "mode": 202,
+      "validation_gains": [
+        1.2832723945909814,
+        1.2858445554588482
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q128_k10",
+      "status": "calibrated",
+      "mode": 200,
+      "validation_gains": [
+        1.295442581935664,
+        1.289402312823909
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q128_k50",
+      "status": "calibrated",
+      "mode": 201,
+      "validation_gains": [
+        1.2934500553695532,
+        1.283274007539295
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q128_k100",
+      "status": "calibrated",
+      "mode": 202,
+      "validation_gains": [
+        1.2753461946027218,
+        1.2861212541722122
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q256_k10",
+      "status": "calibrated",
+      "mode": 202,
+      "validation_gains": [
+        1.303674991420804,
+        1.298208890603883
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    },
+    {
+      "label": "sift1m_q256_k100",
+      "status": "calibrated",
+      "mode": 202,
+      "validation_gains": [
+        1.2930423615471986,
+        1.2324918515078875
+      ],
+      "index_setup_seconds": 1.3045692439999925
+    }
+  ],
+  "scope": "Candidate selection and independent comparison to original dispatcher, not a new Faiss performance claim. Calibration cost excluded from search, recorded separately."
+}

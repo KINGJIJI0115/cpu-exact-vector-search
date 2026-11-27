@@ -1,0 +1,180 @@
+{
+  "selected": {
+    "mode": 7,
+    "block": 256,
+    "n": 1183514,
+    "d": 25,
+    "nq": 1,
+    "k": 100,
+    "kind": "float",
+    "validated": false,
+    "label": "glove25_q1_k100",
+    "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087"
+  },
+  "batches": [
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 121,
+          "ms": 22.245818
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 9.1717
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 9.249504
+        },
+        {
+          "repeat": 1,
+          "method": 121,
+          "ms": 22.656254
+        },
+        {
+          "repeat": 2,
+          "method": 121,
+          "ms": 22.646207
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 9.05219
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 9.248118
+        },
+        {
+          "repeat": 3,
+          "method": 121,
+          "ms": 22.517305
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 9.256044
+        },
+        {
+          "repeat": 4,
+          "method": 121,
+          "ms": 22.685136
+        }
+      ],
+      "medians": {
+        "7": 9.248118,
+        "121": 22.646207
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 3.8400304713803735e-08,
+          "id_recall": 1.0
+        },
+        "121": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 9.038971204855528e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        5836
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    },
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 121,
+          "ms": 21.584481
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 9.028252
+        },
+        {
+          "repeat": 1,
+          "method": 121,
+          "ms": 21.933722
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 9.163651
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 9.114576
+        },
+        {
+          "repeat": 2,
+          "method": 121,
+          "ms": 21.854259
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 9.139238
+        },
+        {
+          "repeat": 3,
+          "method": 121,
+          "ms": 21.497468
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 9.051545
+        },
+        {
+          "repeat": 4,
+          "method": 121,
+          "ms": 21.44197
+        }
+      ],
+      "medians": {
+        "7": 9.114576,
+        "121": 21.584481
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 4.0090811337378796e-08,
+          "id_recall": 1.0
+        },
+        "121": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 6.193174612034724e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        8359
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    }
+  ]
+}

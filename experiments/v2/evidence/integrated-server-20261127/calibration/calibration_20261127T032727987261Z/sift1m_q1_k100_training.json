@@ -1,0 +1,180 @@
+{
+  "selected": {
+    "mode": 100,
+    "block": 256,
+    "n": 1000000,
+    "d": 128,
+    "nq": 1,
+    "k": 100,
+    "kind": "byte",
+    "validated": false,
+    "label": "sift1m_q1_k100",
+    "query_file_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f"
+  },
+  "batches": [
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 100,
+          "ms": 10.721717
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 13.967359
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 14.102836
+        },
+        {
+          "repeat": 1,
+          "method": 100,
+          "ms": 10.622782
+        },
+        {
+          "repeat": 2,
+          "method": 100,
+          "ms": 10.695917
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 13.74575
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 13.88513
+        },
+        {
+          "repeat": 3,
+          "method": 100,
+          "ms": 10.562518
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 13.858024
+        },
+        {
+          "repeat": 4,
+          "method": 100,
+          "ms": 10.668783
+        }
+      ],
+      "medians": {
+        "7": 13.88513,
+        "100": 10.668783
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "100": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        5836
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    },
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 100,
+          "ms": 10.874731
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 14.303599
+        },
+        {
+          "repeat": 1,
+          "method": 100,
+          "ms": 10.886151
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 14.186962
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 14.123412
+        },
+        {
+          "repeat": 2,
+          "method": 100,
+          "ms": 10.839999
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 14.238292
+        },
+        {
+          "repeat": 3,
+          "method": 100,
+          "ms": 10.904261
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 14.299222
+        },
+        {
+          "repeat": 4,
+          "method": 100,
+          "ms": 10.812429
+        }
+      ],
+      "medians": {
+        "7": 14.238292,
+        "100": 10.874731
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        },
+        "100": {
+          "correct": true,
+          "exact": true,
+          "max_distance_error": 0.0,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        8359
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    }
+  ]
+}

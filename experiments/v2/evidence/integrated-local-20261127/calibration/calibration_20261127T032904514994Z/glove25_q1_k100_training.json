@@ -1,0 +1,180 @@
+{
+  "selected": {
+    "mode": 7,
+    "block": 256,
+    "n": 1183514,
+    "d": 25,
+    "nq": 1,
+    "k": 100,
+    "kind": "float",
+    "validated": false,
+    "label": "glove25_q1_k100",
+    "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087"
+  },
+  "batches": [
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 121,
+          "ms": 5.244018
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 4.417042
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 4.885751
+        },
+        {
+          "repeat": 1,
+          "method": 121,
+          "ms": 5.714841
+        },
+        {
+          "repeat": 2,
+          "method": 121,
+          "ms": 5.469607
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 4.791246
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 4.333851
+        },
+        {
+          "repeat": 3,
+          "method": 121,
+          "ms": 5.684382
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 4.633304
+        },
+        {
+          "repeat": 4,
+          "method": 121,
+          "ms": 5.113649
+        }
+      ],
+      "medians": {
+        "7": 4.633304,
+        "121": 5.469607
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 3.8400304713803735e-08,
+          "id_recall": 1.0
+        },
+        "121": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 9.038971204855528e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        5836
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    },
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 121,
+          "ms": 5.824775
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 4.830783
+        },
+        {
+          "repeat": 1,
+          "method": 121,
+          "ms": 5.294302
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 4.027768
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 4.342467
+        },
+        {
+          "repeat": 2,
+          "method": 121,
+          "ms": 5.400423
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 4.09738
+        },
+        {
+          "repeat": 3,
+          "method": 121,
+          "ms": 5.756596
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 4.590205
+        },
+        {
+          "repeat": 4,
+          "method": 121,
+          "ms": 5.421146
+        }
+      ],
+      "medians": {
+        "7": 4.342467,
+        "121": 5.421146
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 4.0090811337378796e-08,
+          "id_recall": 1.0
+        },
+        "121": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 6.193174612034724e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        8359
+      ],
+      "oracle": {
+        "cache_hits": 1,
+        "queries": 1,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    }
+  ]
+}

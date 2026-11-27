@@ -1,0 +1,242 @@
+{
+  "selected": {
+    "mode": 7,
+    "block": 256,
+    "n": 1183514,
+    "d": 25,
+    "nq": 32,
+    "k": 10,
+    "kind": "float",
+    "validated": false,
+    "label": "glove25_q32_k10",
+    "query_file_sha256": "e639a5921f26d8aada0e36dbdc5315c1450d13213eae1ab23df5277e8d2c3087"
+  },
+  "batches": [
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 120,
+          "ms": 29.03695
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 21.40473
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 21.171973
+        },
+        {
+          "repeat": 1,
+          "method": 120,
+          "ms": 30.492211
+        },
+        {
+          "repeat": 2,
+          "method": 120,
+          "ms": 29.06352
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 20.625893
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 21.044132
+        },
+        {
+          "repeat": 3,
+          "method": 120,
+          "ms": 28.758156
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 21.31431
+        },
+        {
+          "repeat": 4,
+          "method": 120,
+          "ms": 29.057222
+        }
+      ],
+      "medians": {
+        "7": 21.171973,
+        "120": 29.057222
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 9.510493437225875e-08,
+          "id_recall": 1.0
+        },
+        "120": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 6.152419779192897e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        5836,
+        217,
+        421,
+        208,
+        4186,
+        5875,
+        5935,
+        9589,
+        6097,
+        9275,
+        1101,
+        882,
+        3751,
+        4353,
+        5581,
+        9910,
+        8712,
+        6452,
+        9541,
+        8684,
+        2066,
+        8268,
+        8287,
+        1296,
+        4036,
+        499,
+        2922,
+        2141,
+        5478,
+        5139,
+        9369,
+        7403
+      ],
+      "oracle": {
+        "cache_hits": 8,
+        "queries": 32,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    },
+    {
+      "raw": [
+        {
+          "repeat": 0,
+          "method": 120,
+          "ms": 29.704871
+        },
+        {
+          "repeat": 0,
+          "method": 7,
+          "ms": 21.052323
+        },
+        {
+          "repeat": 1,
+          "method": 120,
+          "ms": 28.939811
+        },
+        {
+          "repeat": 1,
+          "method": 7,
+          "ms": 20.830977
+        },
+        {
+          "repeat": 2,
+          "method": 7,
+          "ms": 21.968291
+        },
+        {
+          "repeat": 2,
+          "method": 120,
+          "ms": 29.387701
+        },
+        {
+          "repeat": 3,
+          "method": 7,
+          "ms": 20.844042
+        },
+        {
+          "repeat": 3,
+          "method": 120,
+          "ms": 29.538363
+        },
+        {
+          "repeat": 4,
+          "method": 7,
+          "ms": 21.553407
+        },
+        {
+          "repeat": 4,
+          "method": 120,
+          "ms": 30.407353
+        }
+      ],
+      "medians": {
+        "7": 21.052323,
+        "120": 29.538363
+      },
+      "validation": {
+        "7": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 1.127757421892639e-07,
+          "id_recall": 1.0
+        },
+        "120": {
+          "correct": true,
+          "exact": false,
+          "max_distance_error": 7.581148703250662e-08,
+          "id_recall": 1.0
+        }
+      },
+      "query_indices": [
+        8359,
+        6319,
+        2972,
+        4414,
+        8447,
+        3309,
+        9537,
+        4580,
+        4368,
+        6800,
+        484,
+        3919,
+        737,
+        4809,
+        743,
+        7172,
+        9897,
+        9531,
+        7788,
+        8299,
+        6306,
+        9207,
+        5337,
+        6399,
+        2375,
+        6718,
+        2766,
+        2885,
+        4549,
+        8143,
+        883,
+        2461
+      ],
+      "oracle": {
+        "cache_hits": 8,
+        "queries": 32,
+        "database_sha256": "5fa93a28637080fc8340965ebc678a99db3440b3fdafae43e4a3bd9041f22d25",
+        "algorithm_sha256": "e49dda995443394c8f4384fe6b05a8a8b2ff3870bdef51c855f5820558aded28",
+        "scope": "Untimed independent exhaustive float64 reference; data/content-addressed. Search methods always execute."
+      }
+    }
+  ]
+}
