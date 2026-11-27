@@ -5,7 +5,7 @@
 ## 附件清单
 
 - `cpu-exact-vector-search-v2.0-course-full.zip`：完整 v1/v2 自研源码、三份标准测试负载、双机 78 项实验证据、Z3 形式化验证材料与一键复现入口。
-- `51295903131_赵信喆_系统优化课程报告_v2.pdf`：14 页完整课程研究报告（融合 v1 跨层基础与 v2 整数内积升级，含 6 张 300 DPI 中文分析图表）。
+- `cpu-exact-vector-search-v2.0-course-report.pdf`：14 页完整课程研究报告（融合 v1 跨层基础与 v2 整数内积升级，含 6 张 300 DPI 中文分析图表）。
 - `SHA256SUMS.txt`：上述附件的 SHA256 校验值。
 
 > 提示：GitHub 自动生成的 `Source code` 压缩包不含大体积原始数据集，请下载完整复现包 ZIP 进行完整复现（或配合 `python3 tools/import_release_data.py <完整ZIP>` 将已校验负载导入源码目录）。
