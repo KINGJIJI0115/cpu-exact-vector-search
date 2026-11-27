@@ -1,0 +1,14 @@
+{
+  "source_sha256": "bff9d3419d69ed8b9b479fa4061a95fe8c3597be1722b5984666de8a2758d491",
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-mavx2",
+    "-mfma",
+    "-ffp-contract=off",
+    "-shared",
+    "-fPIC"
+  ],
+  "no_blas_faiss_symbols": true,
+  "scope": "D=128 byte-integer norm/dot identity with original fallback; extra norm array included in index construction"
+}

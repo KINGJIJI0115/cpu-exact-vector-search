@@ -1,0 +1,21 @@
+{
+  "control": {
+    "source_sha256": "bafe94f01ac0ca8b3b8c7afaa842df887f0174b9f0ecb203bc51ae905cc5d2fe",
+    "binary_sha256": "a6a470ce5350cb92c89e16bce37c384e5a67610a086b54c430d64d1f773c0e37"
+  },
+  "diagnostic": {
+    "source_sha256": "b74bb249742af7b179b0eb877a7099ca276a46f541555b92183b694cee9e45b3",
+    "binary_sha256": "6da7557662fe8d89f59d67571d564cc28f330ee6660ecc691e7663dd08c29060"
+  },
+  "original_source_sha256": "bafe94f01ac0ca8b3b8c7afaa842df887f0174b9f0ecb203bc51ae905cc5d2fe",
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-mavx2",
+    "-mfma",
+    "-ffp-contract=off",
+    "-shared",
+    "-fPIC"
+  ],
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+}

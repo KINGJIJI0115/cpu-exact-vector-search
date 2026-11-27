@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "z3": "4.8.12",
+  "proofs": [
+    {
+      "name": "integer_identity",
+      "result": "unsat"
+    },
+    {
+      "name": "product_bound",
+      "result": "unsat"
+    },
+    {
+      "name": "pair_dot_int32",
+      "result": "unsat"
+    },
+    {
+      "name": "squared_difference_bound",
+      "result": "unsat"
+    },
+    {
+      "name": "d128_intermediate_and_float_range",
+      "result": "unsat"
+    }
+  ],
+  "mutation": "sat",
+  "counterexample": "[y = 184, q = 175, r = 129, x = 190]",
+  "scope": "Exact integer algebra and conservative D=128 0..255 arithmetic bounds. Reduction induction uses bounded nonnegative terms. Does not verify SIMD lane layout, C++ compiler, memory safety, or machine code; those require independent regression."
+}

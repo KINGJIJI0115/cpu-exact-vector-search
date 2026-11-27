@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "cases": 6,
+  "repeats": 5,
+  "periods": [
+    32,
+    128,
+    512
+  ],
+  "interpretation": "Phase shares estimated from sampled instrumented tiles; compare periods and diagnostic overhead. Distance phase excludes accumulator reduction; selection includes reduction, mask and heap. Wrapper is a diagnostic harness, not the full AdaptiveIndex API. Not a Faiss comparison."
+}

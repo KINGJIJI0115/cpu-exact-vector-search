@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-27T03:04:36.039833+00:00",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "numpy": "2.2.6",
+  "cpu": 0,
+  "threads": 1,
+  "lscpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           42 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  24\nOn-line CPU(s) list:                     0-23\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Core(TM) Ultra 9 275HX\nCPU family:                              6\nModel:                                   198\nThread(s) per core:                      1\nCore(s) per socket:                      24\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                6144.00\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities\nVirtualization:                          VT-x\nHypervisor vendor:                       Microsoft\nVirtualization type:                     full\nL1d cache:                               1.1 MiB (24 instances)\nL1i cache:                               1.5 MiB (24 instances)\nL2 cache:                                72 MiB (24 instances)\nL3 cache:                                36 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-23\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n",
+  "build": {
+    "control": {
+      "source_sha256": "bafe94f01ac0ca8b3b8c7afaa842df887f0174b9f0ecb203bc51ae905cc5d2fe",
+      "binary_sha256": "a6a470ce5350cb92c89e16bce37c384e5a67610a086b54c430d64d1f773c0e37"
+    },
+    "diagnostic": {
+      "source_sha256": "b74bb249742af7b179b0eb877a7099ca276a46f541555b92183b694cee9e45b3",
+      "binary_sha256": "6da7557662fe8d89f59d67571d564cc28f330ee6660ecc691e7663dd08c29060"
+    },
+    "original_source_sha256": "bafe94f01ac0ca8b3b8c7afaa842df887f0174b9f0ecb203bc51ae905cc5d2fe",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-mavx2",
+      "-mfma",
+      "-ffp-contract=off",
+      "-shared",
+      "-fPIC"
+    ],
+    "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+  },
+  "dataset_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+  "query_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+  "scope": "Development diagnostics using historical batch-0 query indices; not new held-out Faiss results.",
+  "perf_probe": {
+    "exit": 2,
+    "stderr": "WARNING: perf not found for kernel 6.18.33.2-microsoft\n\n  You may need to install the following packages for this specific kernel:\n    linux-tools-6.18.33.2-microsoft-standard-WSL2\n    linux-cloud-tools-6.18.33.2-microsoft-standard-WSL2\n\n  You may also want to install one of the following packages to keep up to date:\n    linux-tools-standard-WSL2\n    linux-cloud-tools-standard-WSL2\n"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-27T03:13:53.548098+00:00",
+  "platform": "Linux-5.19.0-32-generic-x86_64-with-glibc2.35",
+  "numpy": "2.2.6",
+  "cpu": 19,
+  "threads": 1,
+  "lscpu": "Architecture:                    x86_64\nCPU op-mode(s):                  32-bit, 64-bit\nAddress sizes:                   46 bits physical, 48 bits virtual\nByte Order:                      Little Endian\nCPU(s):                          80\nOn-line CPU(s) list:             0-79\nVendor ID:                       GenuineIntel\nModel name:                      Intel(R) Xeon(R) Gold 6133 CPU @ 2.50GHz\nCPU family:                      6\nModel:                           85\nThread(s) per core:              2\nCore(s) per socket:              20\nSocket(s):                       2\nStepping:                        4\nCPU max MHz:                     3000.0000\nCPU min MHz:                     1000.0000\nBogoMIPS:                        5000.00\nFlags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d arch_capabilities\nVirtualization:                  VT-x\nL1d cache:                       1.3 MiB (40 instances)\nL1i cache:                       1.3 MiB (40 instances)\nL2 cache:                        40 MiB (40 instances)\nL3 cache:                        55 MiB (2 instances)\nNUMA node(s):                    2\nNUMA node0 CPU(s):               0-19,40-59\nNUMA node1 CPU(s):               20-39,60-79\nVulnerability Itlb multihit:     KVM: Mitigation: VMX disabled\nVulnerability L1tf:              Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable\nVulnerability Mds:               Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Meltdown:          Mitigation; PTI\nVulnerability Mmio stale data:   Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Retbleed:          Mitigation; IBRS\nVulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:        Mitigation; IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS Not affected\nVulnerability Srbds:             Not affected\nVulnerability Tsx async abort:   Mitigation; Clear CPU buffers; SMT vulnerable\n",
+  "build": {
+    "control": {
+      "source_sha256": "bafe94f01ac0ca8b3b8c7afaa842df887f0174b9f0ecb203bc51ae905cc5d2fe",
+      "binary_sha256": "d4404c03dac75fd9b1e2355de581aeb19cd84fc1e5e4963891690148e4c3837e"
+    },
+    "diagnostic": {
+      "source_sha256": "b74bb249742af7b179b0eb877a7099ca276a46f541555b92183b694cee9e45b3",
+      "binary_sha256": "6916fac4d76c5932bfdb7f930ac0a2917feb0e911643542ef20465acaddc831b"
+    },
+    "original_source_sha256": "bafe94f01ac0ca8b3b8c7afaa842df887f0174b9f0ecb203bc51ae905cc5d2fe",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-mavx2",
+      "-mfma",
+      "-ffp-contract=off",
+      "-shared",
+      "-fPIC"
+    ],
+    "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+  },
+  "dataset_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+  "query_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f",
+  "scope": "Development diagnostics using historical batch-0 query indices; not new held-out Faiss results.",
+  "perf_probe": {
+    "error": "[Errno 2] No such file or directory: 'perf'"
+  }
+}

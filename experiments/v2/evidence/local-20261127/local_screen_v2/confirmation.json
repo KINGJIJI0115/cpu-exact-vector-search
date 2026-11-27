@@ -1,0 +1,110 @@
+[
+  {
+    "label": "sift1m_q128_k1",
+    "batch": 0,
+    "selected": "dot200_block256",
+    "base_ms": 183.20469,
+    "selected_ms": 140.804835,
+    "gain": 1.3011249933285316,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q128_k1",
+    "batch": 1,
+    "selected": "dot200_block256",
+    "base_ms": 182.203468,
+    "selected_ms": 140.188113,
+    "gain": 1.299706973015608,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q128_k1",
+    "batch": 2,
+    "selected": "dot200_block256",
+    "base_ms": 182.831638,
+    "selected_ms": 140.867805,
+    "gain": 1.2978951294087389,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q128_k100",
+    "batch": 0,
+    "selected": "dot200_block128",
+    "base_ms": 191.011207,
+    "selected_ms": 150.029756,
+    "gain": 1.2731554865689445,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q128_k100",
+    "batch": 1,
+    "selected": "dot200_block128",
+    "base_ms": 190.498862,
+    "selected_ms": 148.608235,
+    "gain": 1.2818863100015958,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q128_k100",
+    "batch": 2,
+    "selected": "dot200_block128",
+    "base_ms": 190.337778,
+    "selected_ms": 148.839278,
+    "gain": 1.2788141716194026,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q256_k10",
+    "batch": 0,
+    "selected": "dot200_block256",
+    "base_ms": 364.216192,
+    "selected_ms": 280.759149,
+    "gain": 1.2972549364722572,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q256_k10",
+    "batch": 1,
+    "selected": "dot200_block256",
+    "base_ms": 363.298212,
+    "selected_ms": 279.855616,
+    "gain": 1.298163021320251,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q256_k10",
+    "batch": 2,
+    "selected": "dot200_block256",
+    "base_ms": 374.546385,
+    "selected_ms": 291.984705,
+    "gain": 1.282760290474804,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q256_k100",
+    "batch": 0,
+    "selected": "dot200_block512",
+    "base_ms": 392.74812,
+    "selected_ms": 302.41225,
+    "gain": 1.2987176280061405,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q256_k100",
+    "batch": 1,
+    "selected": "dot200_block512",
+    "base_ms": 393.945909,
+    "selected_ms": 304.720523,
+    "gain": 1.2928105567736898,
+    "official_groundtruth_distances_exact": true
+  },
+  {
+    "label": "sift1m_q256_k100",
+    "batch": 2,
+    "selected": "dot200_block512",
+    "base_ms": 386.836376,
+    "selected_ms": 300.260513,
+    "gain": 1.288335825896627,
+    "official_groundtruth_distances_exact": true
+  }
+]

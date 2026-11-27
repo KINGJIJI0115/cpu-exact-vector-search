@@ -1,0 +1,5 @@
+{
+  "cases": 56,
+  "passed": true,
+  "scope": "Independent float64 exhaustive oracle on small integer/tie/tail/K=N and noninteger query inputs; profile/control equivalence."
+}

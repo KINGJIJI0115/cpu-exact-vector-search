@@ -1,0 +1,62 @@
+[
+  {
+    "method": "candidate",
+    "setup_ms": 1043.765366077423,
+    "rss_before_kib": 531024,
+    "rss_after_kib": 1160416,
+    "peak_rss_kib": 1160416,
+    "index_payload_bytes": 644000064,
+    "norm_bytes": 4000000,
+    "repeat": 0
+  },
+  {
+    "method": "control",
+    "setup_ms": 911.5210473537445,
+    "rss_before_kib": 531104,
+    "rss_after_kib": 1156536,
+    "peak_rss_kib": 1156536,
+    "index_payload_bytes": 640000064,
+    "norm_bytes": 0,
+    "repeat": 0
+  },
+  {
+    "method": "candidate",
+    "setup_ms": 1031.7275114357471,
+    "rss_before_kib": 530964,
+    "rss_after_kib": 1160360,
+    "peak_rss_kib": 1160360,
+    "index_payload_bytes": 644000064,
+    "norm_bytes": 4000000,
+    "repeat": 1
+  },
+  {
+    "method": "control",
+    "setup_ms": 908.9465439319611,
+    "rss_before_kib": 530972,
+    "rss_after_kib": 1156404,
+    "peak_rss_kib": 1156404,
+    "index_payload_bytes": 640000064,
+    "norm_bytes": 0,
+    "repeat": 1
+  },
+  {
+    "method": "control",
+    "setup_ms": 1020.3045587986708,
+    "rss_before_kib": 531052,
+    "rss_after_kib": 1156484,
+    "peak_rss_kib": 1156484,
+    "index_payload_bytes": 640000064,
+    "norm_bytes": 0,
+    "repeat": 2
+  },
+  {
+    "method": "candidate",
+    "setup_ms": 1032.6625686138868,
+    "rss_before_kib": 531260,
+    "rss_after_kib": 1160652,
+    "peak_rss_kib": 1160652,
+    "index_payload_bytes": 644000064,
+    "norm_bytes": 4000000,
+    "repeat": 2
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "cases": 258,
+  "scope": "Float64 exhaustive oracle, exact byte distances/IDs, tails/ties/K=N/0/255; release equivalence including float/non128 fallbacks."
+}

@@ -1,0 +1,16 @@
+{
+  "control": {
+    "setup_ms": 911.5210473537445,
+    "rss_after_kib": 1156484,
+    "peak_rss_kib": 1156484,
+    "index_payload_bytes": 640000064,
+    "norm_bytes": 0
+  },
+  "candidate": {
+    "setup_ms": 1032.6625686138868,
+    "rss_after_kib": 1160416,
+    "peak_rss_kib": 1160416,
+    "index_payload_bytes": 644000064,
+    "norm_bytes": 4000000
+  }
+}

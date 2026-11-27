@@ -19,3 +19,7 @@
 .DS_Store
 Thumbs.db
 *.tmp
+
+# V2 diagnostic build and raw runs
+/experiments/v2/build/
+/experiments/v2/runs/

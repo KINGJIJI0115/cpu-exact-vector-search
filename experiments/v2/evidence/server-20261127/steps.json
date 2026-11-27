@@ -1,0 +1,17 @@
+[
+  {
+    "step": "profile",
+    "exit": 0,
+    "seconds": 110.64157557860017
+  },
+  {
+    "step": "screen",
+    "exit": 0,
+    "seconds": 360.29341300949454
+  },
+  {
+    "step": "setup",
+    "exit": 0,
+    "seconds": 9.532340532168746
+  }
+]

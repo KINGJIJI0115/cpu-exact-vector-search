@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "scope": "Local development 4 configurations, not 78-case Faiss comparison; selected before fresh confirmation queries",
+  "frozen_selection_sha256": "6882e4df2ea24a44ba5fa9e387d2544e2f878d1a53671fbeb0e5c6ecff5c1d5c",
+  "cases": 12,
+  "norm_bytes": 4000000
+}
