@@ -38,6 +38,7 @@ linux_cjk_fallbacks = [
     '/usr/share/fonts/truetype/arphic/uming.ttc',
 ]
 
+
 def pick_font(env_var, candidates, default_fallback=None):
     env_p = os.environ.get(env_var)
     if env_p and Path(env_p).exists():
@@ -52,6 +53,7 @@ def pick_font(env_var, candidates, default_fallback=None):
         if Path(lf).exists():
             return lf
     raise FileNotFoundError(f'No usable CJK font found for {env_var}; set VECTOR_REPORT_FONT.')
+
 
 song_path = pick_font('VECTOR_REPORT_FONT', ['simsun.ttc', 'STSONG.TTF', 'msyh.ttc'])
 hei_path = pick_font('VECTOR_REPORT_BOLD_FONT', ['msyhbd.ttc', 'simhei.ttf', 'Dengb.ttf'], default_fallback=song_path)
@@ -76,72 +78,80 @@ BORDER_LIGHT = colors.HexColor('#cbd5e1')
 
 # Page geometry
 PAGE_W, PAGE_H = A4
-LEFT_M, RIGHT_M = 54, 54
-TOP_M, BOTTOM_M = 52, 48
-CONTENT_W = PAGE_W - LEFT_M - RIGHT_M  # ~487 pt
+LEFT_M, RIGHT_M = 50, 50
+TOP_M, BOTTOM_M = 46, 43
+CONTENT_W = PAGE_W - LEFT_M - RIGHT_M  # ~495 pt
 
 styles = {
     'title': ParagraphStyle(
-        'title', fontName='Hei', fontSize=18.5, leading=26,
+        'title', fontName='Hei', fontSize=18.0, leading=25,
         textColor=NAVY, alignment=1, spaceAfter=6
     ),
     'meta': ParagraphStyle(
-        'meta', fontName='YaHei', fontSize=9.5, leading=14,
+        'meta', fontName='YaHei', fontSize=9.3, leading=14,
         textColor=SLATE, alignment=1, spaceAfter=4
     ),
     'h2': ParagraphStyle(
-        'h2', fontName='Hei', fontSize=13, leading=19,
-        textColor=NAVY, spaceBefore=13, spaceAfter=5, keepWithNext=True
+        'h2', fontName='Hei', fontSize=12.6, leading=18.2,
+        textColor=NAVY, spaceBefore=10.5, spaceAfter=4.0, keepWithNext=True
     ),
     'h3': ParagraphStyle(
-        'h3', fontName='Hei', fontSize=10.8, leading=16,
-        textColor=colors.HexColor('#1e40af'), spaceBefore=9, spaceAfter=4, keepWithNext=True
+        'h3', fontName='Hei', fontSize=10.6, leading=15.2,
+        textColor=colors.HexColor('#1e40af'), spaceBefore=7.8, spaceAfter=3.2, keepWithNext=True
     ),
     'h4': ParagraphStyle(
-        'h4', fontName='Hei', fontSize=9.8, leading=14.5,
-        textColor=DARK, spaceBefore=6, spaceAfter=3, keepWithNext=True
+        'h4', fontName='Hei', fontSize=9.6, leading=13.8,
+        textColor=DARK, spaceBefore=5.5, spaceAfter=2.2, keepWithNext=True
     ),
     'body': ParagraphStyle(
-        'body', fontName='Song', fontSize=10.0, leading=14.8,
-        textColor=DARK, spaceAfter=4.0, wordWrap='CJK'
+        'body', fontName='Song', fontSize=9.8, leading=14.4,
+        textColor=DARK, spaceAfter=3.4, wordWrap='CJK'
     ),
     'abstract': ParagraphStyle(
-        'abstract', fontName='Song', fontSize=9.5, leading=14.3,
-        textColor=DARK, spaceAfter=3.6, wordWrap='CJK'
+        'abstract', fontName='Song', fontSize=9.3, leading=13.8,
+        textColor=DARK, spaceAfter=3.2, wordWrap='CJK'
     ),
     'bullet': ParagraphStyle(
-        'bullet', fontName='Song', fontSize=9.8, leading=14.5,
-        textColor=DARK, leftIndent=14, firstLineIndent=-10, spaceAfter=3.2, wordWrap='CJK'
+        'bullet', fontName='Song', fontSize=9.6, leading=14.1,
+        textColor=DARK, leftIndent=14, firstLineIndent=-10, spaceAfter=2.7, wordWrap='CJK'
     ),
     'subbullet': ParagraphStyle(
-        'subbullet', fontName='Song', fontSize=9.5, leading=14.0,
-        textColor=DARK, leftIndent=26, firstLineIndent=-10, spaceAfter=2.5, wordWrap='CJK'
+        'subbullet', fontName='Song', fontSize=9.3, leading=13.6,
+        textColor=DARK, leftIndent=26, firstLineIndent=-10, spaceAfter=2.1, wordWrap='CJK'
     ),
     'cell': ParagraphStyle(
-        'cell', fontName='Song', fontSize=8.3, leading=11.8,
+        'cell', fontName='Song', fontSize=8.0, leading=11.2,
         textColor=DARK, wordWrap='CJK'
     ),
     'cell_head': ParagraphStyle(
-        'cell_head', fontName='Hei', fontSize=8.4, leading=11.8,
+        'cell_head', fontName='Hei', fontSize=8.1, leading=11.2,
+        textColor=NAVY, wordWrap='CJK'
+    ),
+    'cell_dense': ParagraphStyle(
+        'cell_dense', fontName='Song', fontSize=7.5, leading=10.3,
+        textColor=DARK, wordWrap='CJK'
+    ),
+    'cell_head_dense': ParagraphStyle(
+        'cell_head_dense', fontName='Hei', fontSize=7.6, leading=10.3,
         textColor=NAVY, wordWrap='CJK'
     ),
     'caption': ParagraphStyle(
-        'caption', fontName='YaHei', fontSize=8.6, leading=12.8,
-        textColor=SLATE, alignment=1, spaceBefore=2, spaceAfter=8, wordWrap='CJK'
+        'caption', fontName='YaHei', fontSize=8.4, leading=12.2,
+        textColor=SLATE, alignment=1, spaceBefore=2, spaceAfter=6, wordWrap='CJK'
     ),
     'ref': ParagraphStyle(
-        'ref', fontName='Song', fontSize=9.2, leading=13.8,
-        textColor=DARK, leftIndent=18, firstLineIndent=-18, spaceAfter=3.5, wordWrap='CJK'
+        'ref', fontName='Song', fontSize=8.9, leading=13.0,
+        textColor=DARK, leftIndent=18, firstLineIndent=-18, spaceAfter=2.2, wordWrap='CJK'
     ),
 }
-
 
 def format_inline(t: str) -> str:
     # Protect inline code first so regexes don't mangle code
     codes = []
+
     def stash_code(m):
         idx = len(codes)
-        codes.append(f'<font name="Mono" size="8.6" color="#1e3a5f">{html.escape(m.group(1))}</font>')
+        codes.append(f'<font name="Mono" size="8.4" color="#1e3a5f">{html.escape(m.group(1))}</font>')
         return f'@@CODE{idx}@@'
 
     t = re.sub(r'`([^`]+)`', stash_code, t)
@@ -156,8 +166,8 @@ def format_inline(t: str) -> str:
     # Bold **text**
     safe = re.sub(r'\*\*([^*]+)\*\*', lambda m: f'<font name="Hei">{m.group(1)}</font>', safe)
 
-    # Clean mathematical superscripts/subscripts & symbols in prose (all glyphs guaranteed in SimSun/YaHei)
-    safe = safe.replace('2^24', '2<sup>24</sup>').replace('255^2', '255<sup>2</sup>')
+    # Clean mathematical superscripts/subscripts & symbols in prose (all glyphs verified in SimSun/YaHei)
+    safe = safe.replace('2^24', '2<sup>24</sup>').replace('2^31', '2<sup>31</sup>').replace('255^2', '255<sup>2</sup>')
     safe = safe.replace('||x - q||^2', '‖x - q‖<sup>2</sup>')
     safe = safe.replace('||x||^2', '‖x‖<sup>2</sup>').replace('||q||^2', '‖q‖<sup>2</sup>')
     safe = safe.replace('d_{2j}^2', 'd<sub>2j</sub><sup>2</sup>').replace('d_{2j+1}^2', 'd<sub>2j+1</sub><sup>2</sup>')
@@ -165,13 +175,14 @@ def format_inline(t: str) -> str:
     safe = safe.replace('d_i', 'd<sub>i</sub>').replace('x_i', 'x<sub>i</sub>').replace('q_i', 'q<sub>i</sub>')
     safe = safe.replace('w_i', 'w<sub>i</sub>').replace('Δt_i', 'Δt<sub>i</sub>')
     safe = safe.replace('y_r', 'y<sub>r</sub>').replace('Q_batch', 'Q<sub>batch</sub>')
-    safe = safe.replace('&lt;=', '≤').replace('&gt;=', '≥').replace(' &lt;&lt; ', ' &lt;&lt; ')
+    safe = safe.replace('&lt;=', '≤').replace('&gt;=', '≥')
     safe = safe.replace('1e-5', '10<sup>-5</sup>').replace('1e-4', '10<sup>-4</sup>').replace('1e-6', '10<sup>-6</sup>')
     safe = safe.replace('1.63e-7', '1.63×10<sup>-7</sup>').replace('2.22e-16', '2.22×10<sup>-16</sup>')
 
     # Restore code spans
     for idx, c in enumerate(codes):
         safe = safe.replace(f'@@CODE{idx}@@', c)
+
     return safe
 
 
@@ -181,24 +192,28 @@ def P(t: str, style: str = 'body') -> Paragraph:
 
 def compute_col_widths(raw_rows):
     ncols = len(raw_rows[0])
-    # Estimate display width per column (CJK char = 1.8, ASCII = 1.0)
+
     def text_weight(s):
         s = re.sub(r'\*\*|`', '', s)
-        return sum(1.75 if ord(ch) > 127 else 0.95 for ch in s)
+        return sum(1.72 if ord(ch) > 127 else 0.92 for ch in s)
+
+    def max_ascii_token(s):
+        s = re.sub(r'\*\*|`', '', s)
+        toks = re.findall(r'[A-Za-z0-9_.\-×/]+', s)
+        return max((len(tok) * 0.95 for tok in toks), default=0.0)
 
     max_w = [0.0] * ncols
+    min_tok = [0.0] * ncols
     for r_idx, row in enumerate(raw_rows):
         for c_idx, cell in enumerate(row):
             w = text_weight(cell)
             if r_idx == 0:
                 w = max(w, 6.0)
-            # Cap single long cell so one huge description column doesn't crush numeric cols
-            max_w[c_idx] = max(max_w[c_idx], min(w, 46.0))
-    # Give sensible minimum width
-    weights = [max(w, 7.5) for w in max_w]
+            max_w[c_idx] = max(max_w[c_idx], min(w, 34.0))
+            min_tok[c_idx] = max(min_tok[c_idx], min(max_ascii_token(cell) + 2.0, 15.0))
+    weights = [max(w, t, 7.2) for w, t in zip(max_w, min_tok)]
     total = sum(weights)
-    widths = [CONTENT_W * (w / total) for w in weights]
-    return widths
+    return [CONTENT_W * (w / total) for w in weights]
 
 
 story = []
@@ -209,22 +224,24 @@ in_abstract = False
 abstract_paras = []
 in_refs = False
 meta_lines = []
+doc_h1_title = None
+
 
 def flush_abstract():
     global in_abstract, abstract_paras
     if abstract_paras:
-        hdr = Paragraph('<font name="Hei" size="10.8" color="#1e3a5f">摘　要</font>', styles['abstract'])
-        box_data = [[ [hdr] + abstract_paras ]]
+        hdr = Paragraph('<font name="Hei" size="10.6" color="#1e3a5f">摘　要</font>', styles['abstract'])
+        box_data = [[[hdr] + abstract_paras]]
         tbl = Table(box_data, colWidths=[CONTENT_W])
         tbl.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, -1), CALLOUT_BG),
             ('LINEBEFORE', (0, 0), (0, -1), 3.0, NAVY),
             ('LEFTPADDING', (0, 0), (-1, -1), 11),
             ('RIGHTPADDING', (0, 0), (-1, -1), 11),
-            ('TOPPADDING', (0, 0), (-1, -1), 8),
-            ('BOTTOMPADDING', (0, 0), (-1, -1), 7),
+            ('TOPPADDING', (0, 0), (-1, -1), 7.5),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 6.5),
         ]))
-        story.extend([tbl, Spacer(1, 8)])
+        story.extend([tbl, Spacer(1, 7)])
         abstract_paras = []
     in_abstract = False
 
@@ -238,8 +255,8 @@ while i < len(lines):
 
     # Title
     if line.startswith('# '):
-        story.append(P(line[2:].strip(), 'title'))
-        # Collect immediate metadata lines (姓名 / 课程)
+        doc_h1_title = line[2:].strip()
+        story.append(P(doc_h1_title, 'title'))
         while i < len(lines):
             nxt = lines[i].strip()
             if not nxt:
@@ -253,7 +270,7 @@ while i < len(lines):
         if meta_lines:
             story.append(P('　｜　'.join(meta_lines), 'meta'))
             story.append(Spacer(1, 2))
-            story.append(HRFlowable(width='100%', thickness=1.2, color=NAVY, spaceBefore=2, spaceAfter=10))
+            story.append(HRFlowable(width='100%', thickness=1.2, color=NAVY, spaceBefore=2, spaceAfter=9))
         continue
 
     # H2
@@ -264,7 +281,7 @@ while i < len(lines):
             in_abstract = True
             continue
         in_refs = (heading == '参考材料')
-        hr = HRFlowable(width='100%', thickness=0.6, color=BORDER_LIGHT, spaceBefore=0, spaceAfter=5)
+        hr = HRFlowable(width='100%', thickness=0.6, color=BORDER_LIGHT, spaceBefore=0, spaceAfter=4.5)
         hr.keepWithNext = True
         story.append(P(heading, 'h2'))
         story.append(hr)
@@ -293,23 +310,28 @@ while i < len(lines):
                 continue
             raw_rows.append([c.strip() for c in row.strip('|').split('|')])
         col_widths = compute_col_widths(raw_rows)
+        is_dense = (len(raw_rows[0]) >= 7 or len(raw_rows) >= 16)
         data_rows = []
         for r_idx, row in enumerate(raw_rows):
-            st = 'cell_head' if r_idx == 0 else 'cell'
+            if is_dense:
+                st = 'cell_head_dense' if r_idx == 0 else 'cell_dense'
+            else:
+                st = 'cell_head' if r_idx == 0 else 'cell'
             data_rows.append([P(c, st) for c in row])
 
+        pad_x = 3.6 if is_dense else 4.8
+        pad_y = 3.0 if len(data_rows) > 10 else 4.2
         tstyle = [
             ('BACKGROUND', (0, 0), (-1, 0), HEADER_BG),
             ('LINEABOVE', (0, 0), (-1, 0), 1.1, NAVY),
             ('LINEBELOW', (0, 0), (-1, 0), 0.8, NAVY),
             ('LINEBELOW', (0, -1), (-1, -1), 1.0, NAVY),
             ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-            ('LEFTPADDING', (0, 0), (-1, -1), 5),
-            ('RIGHTPADDING', (0, 0), (-1, -1), 5),
-            ('TOPPADDING', (0, 0), (-1, -1), 3.6 if len(data_rows) > 10 else 4.5),
-            ('BOTTOMPADDING', (0, 0), (-1, -1), 3.6 if len(data_rows) > 10 else 4.5),
+            ('LEFTPADDING', (0, 0), (-1, -1), pad_x),
+            ('RIGHTPADDING', (0, 0), (-1, -1), pad_x),
+            ('TOPPADDING', (0, 0), (-1, -1), pad_y),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), pad_y),
         ]
-        # Subtle zebra rows
         for r_idx in range(1, len(data_rows)):
             if r_idx % 2 == 0:
                 tstyle.append(('BACKGROUND', (0, r_idx), (-1, r_idx), ROW_ALT))
@@ -317,11 +339,11 @@ while i < len(lines):
         table.setStyle(TableStyle(tstyle))
         if len(data_rows) <= 10 and story and isinstance(story[-1], Paragraph) and story[-1].style.name == 'h4':
             hdr_h4 = story.pop()
-            story.append(KeepTogether([hdr_h4, table, Spacer(1, 7)]))
+            story.append(KeepTogether([hdr_h4, table, Spacer(1, 6.5)]))
         elif len(data_rows) <= 10:
-            story.append(KeepTogether([table, Spacer(1, 7)]))
+            story.append(KeepTogether([table, Spacer(1, 6.5)]))
         else:
-            story.extend([table, Spacer(1, 7)])
+            story.extend([table, Spacer(1, 6.5)])
         continue
 
     # Images + Caption
@@ -331,45 +353,46 @@ while i < len(lines):
         assert m, line
         fig_counter += 1
         alt_text, rel_path = m.group(1).strip(), m.group(2).strip()
+        # Strip manual '图N：' prefix from alt_text if present to avoid double numbering
+        alt_text = re.sub(r'^图\s*\d+\s*[：:]\s*', '', alt_text)
         img_path = folder / rel_path
         iw, ih = ImageReader(str(img_path)).getSize()
-        scale = min(CONTENT_W / iw, 270.0 / ih)
+        scale = min(CONTENT_W / iw, 268.0 / ih)
         img_flow = Image(str(img_path), width=iw * scale, height=ih * scale)
         img_flow.hAlign = 'CENTER'
 
         cap_desc = alt_text
-        # Attach immediately following explanation line starting with '图中'
         look = i
         while look < len(lines) and not lines[look].strip():
             look += 1
-        if look < len(lines) and lines[look].strip().startswith('图中'):
-            cap_desc = f'{alt_text}。{lines[look].strip()}'
+        if look < len(lines) and (lines[look].strip().startswith('图中') or re.match(r'^图\s*\d+\s*[：:]', lines[look].strip())):
+            extra = re.sub(r'^图\s*\d+\s*[：:]\s*', '', lines[look].strip())
+            cap_desc = f'{alt_text}。{extra}'
             i = look + 1
 
         cap_para = P(f'**图 {fig_counter}**：{cap_desc}', 'caption')
-        story.append(KeepTogether([Spacer(1, 4), img_flow, Spacer(1, 4), cap_para]))
+        story.append(KeepTogether([Spacer(1, 3.5), img_flow, Spacer(1, 3.5), cap_para]))
         continue
 
-    # Sub-bullets (indented '  - ')
+    # Sub-bullets
     if raw_line.startswith('  - ') or raw_line.startswith('    - '):
         flush_abstract()
         story.append(P('◦  ' + line[2:].strip(), 'subbullet'))
         continue
 
-    # Top-level bullets ('- ')
+    # Top-level bullets
     if line.startswith('- '):
         flush_abstract()
         story.append(P('•  ' + line[2:].strip(), 'bullet'))
         continue
 
-    # Numbered lists ('1. ')
+    # Numbered lists
     m_num = re.match(r'^(\d+)\.\s+(.*)$', line)
     if m_num:
         flush_abstract()
         story.append(P(f'**{m_num.group(1)}.** {m_num.group(2)}', 'bullet'))
         continue
 
-    # Abstract vs Reference vs Normal paragraph
     if in_abstract:
         abstract_paras.append(P(line, 'abstract'))
     elif in_refs:
@@ -379,30 +402,29 @@ while i < len(lines):
 
 flush_abstract()
 
-
-report_title = os.environ.get('VECTOR_REPORT_TITLE', '面向批量精确向量检索的 CPU 跨层性能优化')
+default_title = doc_h1_title or '面向 CPU 精确向量检索的跨层优化与跨机器自动校准'
+report_title = os.environ.get('VECTOR_REPORT_TITLE', default_title)
 report_subtitle = os.environ.get('VECTOR_REPORT_SUBTITLE', '软件系统优化课程项目研究报告')
+
 
 def draw_header_footer(canvas, doc):
     canvas.saveState()
-    # Running header on pages 2+
     if doc.page > 1:
         canvas.setFont('YaHei', 8.0)
         canvas.setFillColor(SLATE)
-        canvas.drawString(LEFT_M, PAGE_H - 32, report_title)
-        canvas.drawRightString(PAGE_W - RIGHT_M, PAGE_H - 32, report_subtitle)
+        canvas.drawString(LEFT_M, PAGE_H - 30, report_title)
+        canvas.drawRightString(PAGE_W - RIGHT_M, PAGE_H - 30, report_subtitle)
         canvas.setStrokeColor(BORDER_LIGHT)
         canvas.setLineWidth(0.5)
-        canvas.line(LEFT_M, PAGE_H - 37, PAGE_W - RIGHT_M, PAGE_H - 37)
-    # Running footer on all pages
+        canvas.line(LEFT_M, PAGE_H - 35, PAGE_W - RIGHT_M, PAGE_H - 35)
     canvas.setStrokeColor(BORDER_LIGHT)
     canvas.setLineWidth(0.5)
-    canvas.line(LEFT_M, 36, PAGE_W - RIGHT_M, 36)
-    canvas.setFont('YaHei', 8.2)
+    canvas.line(LEFT_M, 34, PAGE_W - RIGHT_M, 34)
+    canvas.setFont('YaHei', 8.0)
     canvas.setFillColor(SLATE)
     footer_left = os.environ.get('VECTOR_REPORT_FOOTER', '赵信喆  51295903131  软件系统优化')
-    canvas.drawString(LEFT_M, 23, footer_left)
-    canvas.drawRightString(PAGE_W - RIGHT_M, 23, f'第 {doc.page} 页')
+    canvas.drawString(LEFT_M, 21, footer_left)
+    canvas.drawRightString(PAGE_W - RIGHT_M, 21, f'第 {doc.page} 页')
     canvas.restoreState()
 
 
@@ -413,7 +435,7 @@ doc = SimpleDocTemplate(
     leftMargin=LEFT_M,
     topMargin=TOP_M,
     bottomMargin=BOTTOM_M,
-    title=os.environ.get('VECTOR_REPORT_TITLE', '面向批量精确向量检索的 CPU 跨层性能优化'),
+    title=report_title,
     author=os.environ.get('VECTOR_REPORT_AUTHOR', '赵信喆'),
 )
 doc.build(story, onFirstPage=draw_header_footer, onLaterPages=draw_header_footer)

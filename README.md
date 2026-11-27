@@ -1,93 +1,52 @@
-# 面向批量精确向量检索的 CPU 跨层性能优化
+# 面向 CPU 精确向量检索的跨层优化与跨机器自动校准（v2）
 
-> 当前开发分支新增了v2整数内积自动校准实验。原v1.0-course发布内容继续保留；新实验见[运行说明](autotune_v2/README.md)和[两机完整对比结果](autotune_v2/RESULTS.md)。
+作者：赵信喆（学号 `51295903131`）｜课程：《软件系统优化》｜版本：`v2.0-course`（2026年11月27日）
 
-**课程完整材料：** [完整复现 ZIP（含全部负载）](https://github.com/KINGJIJI0115/cpu-exact-vector-search/releases/download/v1.0-course/cpu-exact-vector-search-v1.0-course-full.zip) · [14 页课程报告 PDF](https://github.com/KINGJIJI0115/cpu-exact-vector-search/releases/download/v1.0-course/course-report.pdf) · [Release 页面 (`v1.0-course`)](https://github.com/KINGJIJI0115/cpu-exact-vector-search/releases/tag/v1.0-course)
+本项目研究常驻内存向量库上的批量精确平方 L2 最近邻检索（Exact kNN Search），在 **SIFT1M**、**GloVe25** 与 **SIFTsmall** 三个标准真实负载上，完成了从初始基线剖析、四层软硬件跨层优化（v1）到大批量指令级重构与缓存感知分块自动校准（v2）的两轮完整性能优化闭环。
 
-作者：赵信喆（软件系统优化课程项目）
+## 核心成果总览（双机 78 项同轮 Faiss 对照）
 
-本项目以百万级常驻内存向量库上的批量精确最近邻检索（Exact kNN / 平方 L2）为真实负载，围绕 **测量剖析 → 四层软硬件跨层优化 → 跨微架构自动校准 → 形式化验证与一键复现** 完成端到端性能优化。Faiss 仅作为外部性能对照基准，不参与自研内核的任何计算。
+每项测试均与全部适用 Faiss 路径（`faiss_flat`、`faiss_direct`、`faiss_blas` 及 SIFT 的 `faiss_sq8_direct`）中最快者同轮随机交错比较（单线程绑核，固定 `OPENBLAS_CORETYPE=Haswell`）：
 
-## 主要结果与亮点
+| 测试机器与版本 | 正确性 | 领先批次数 | 总体几何平均加速比 | 加速比范围 | 备注 |
+|---|---:|---:|---:|---:|---|
+| 本地 Core Ultra 9 275HX（v1 固定版） | 78 / 78 | 78 / 78 | 2.086× | 1.210–4.600× | 四层基础跨层优化 |
+| **本地 Core Ultra 9 275HX（v2 自动校准版）** | **78 / 78** | **78 / 78** | **2.488×** | **1.115–7.356×** | SIFT1M 2.738×（峰值 7.356×），GloVe25 1.919× |
+| 学校 Xeon Gold 6133（v1 固定版 / v1 自动校准） | 78 / 78 | 57/78 → 67/78 | 1.307× → 1.393× | 0.883–2.130× | 自动改选 `mode 100` 解决 Q=1/2 分化 |
+| **学校 Xeon Gold 6133（v2 自动校准版）** | **78 / 78** | **78 / 78** | **1.512×** | **1.085–2.384×** | 消除 512 条 `vpsubw` + 选 `block=128`，大批量全领先 |
 
-| 实验平台与方案 | 领先最快适用 Faiss 批次数 | 三批全领先配置数 | 几何平均加速比 | 加速比范围 |
-|---|---:|---:|---:|---:|
-| 本地 Core Ultra 9 275HX（固定版） | **78 / 78** | **26 / 26** | **2.086×** | 1.21–4.60× |
-| 学校 Xeon Gold 6133（自动校准版） | **67 / 78** | **22 / 26** | **1.393×** | 0.883–2.130× |
+- **四层软硬件跨层优化**：流式定长最大堆（L1）+ 8 路 AoSoA/无损 `uint8` 字节布局与预存整数范数（L2）+ AVX2 零 `vpsubw` 整数内积核（L3，热函数静态指令由 3,010 降至 2,604）+ 按机器 CPU/源码 SHA256 指纹自动校准与分块选择 `{128, 256, 512}`（L4）。
+- **形式化验证（Z3 4.8.12）**：完整覆盖 36 项有界 Top-K 抽象模型 + 4 项无损字节平方差引理 + 5 项 v2 整数范数内积算术引理（全部 `UNSAT`），并配套双变异反例证伪（全部 `SAT`）。
+- **全自动复现（负载随包提供）**：完整课程提交包随附全部三份原始测试负载，解压即可离线准备数据并一键复现。
 
-- **逐层消融验证**：SIFTsmall 上阶段剖析定位瓶颈由 Top-K 筛选（60.8%）转移至距离计算（84.9%），组合流式最大堆、候选分块与 AVX2 后相对全排序基线加速 **9.43×**。
-- **跨机自适应**：在 Xeon Gold 6133 上自动以紧凑字节核（`mode 100`）替代固定展开核（`mode 110`），使 SIFT Q=1 提速 **1.38–1.40×** 并转为领先 Faiss，同轮领先批次数由 58/78 提升至 **67/78**，正确性 **78/78** 全部通过。
-- **形式化验证与全自动复现**：内置 **Z3 形式化验证**（36 项有界 Top-K 抽象模型、变异证伪反例与 4 项无损整数算术引理）、3292 项边界回归测试、全自动一键复现脚本及完整的 [AI 辅助研发记录](AI_ASSISTANCE_FINAL.md)。
+## 核心文档导航
 
-> 主实验覆盖 SIFT1M 与 GloVe25 共 26 个配置 × 3 批查询，所有方法与 BLAS/OpenMP 均为单线程并固定 `OPENBLAS_CORETYPE=Haswell`。以上数字来自归档实测，新机器运行将生成本机报告。
+1. [`report/51295903131_赵信喆_系统优化课程报告.pdf`](report/51295903131_赵信喆_系统优化课程报告.pdf)：14 页完整研究报告（融合 v1 跨层基础与 v2 整数内积升级，含 6 张 300 DPI 中文配图与双机完整 26 配置数据）。
+2. [`START_HERE.md`](START_HERE.md)：面向课程评审的快速阅读与验收指引。
+3. [`COURSE_CHECKLIST.md`](COURSE_CHECKLIST.md)：课程项目要求与提交材料逐项对应表。
+4. [`REPRODUCE.md`](REPRODUCE.md)：全自动一键复现、快速验收与分步执行说明。
+5. [`ENVIRONMENT.md`](ENVIRONMENT.md) 与 [`DATA_SOURCES.md`](DATA_SOURCES.md)：软硬件环境、依赖与基准数据来源说明。
+6. [`AI_ASSISTANCE_FINAL.md`](AI_ASSISTANCE_FINAL.md)：人机闭环 AI 辅助研发说明（复现无需在线 AI 服务或密钥）。
 
-![学校服务器 SIFT1M 路径切换与双机代表性配置加速比对比](report/figures/fig3_faiss_paths_crossover.png)
+## 下载完整复现包
 
-## 四层软硬件跨层优化
+**老师复现请下载 [v2.0-course Release](https://github.com/KINGJIJI0115/cpu-exact-vector-search/releases/tag/v2.0-course) 中的 `cpu-exact-vector-search-v2.0-course-full.zip`。** 该附件包含全部三份负载；GitHub 自动生成的 Source code ZIP 不包含原始负载。
 
-- **L1 算法与数据结构层**：完整排序 $O(N \log N)$ → 流式定长最大堆 $O(N \log K)$，消除 $O(N)$ 距离数组并将替换合并为单次下沉调整。
-- **L2 内存与缓存层**：8 路 AoSoA 交错布局、64 字节对齐、256 候选块级缓存分块；0–255 整数输入启用无损 `uint8` 表示（单份存储体积降低 4×）。
-- **L3 指令集与微架构层**：AVX2 256-bit 8 通道并行、`VPMADDWD` 无损整数乘加、128/25 维固定展开、1/2/4/8 查询寄存器复用与 SIMD 阈值掩码剪枝。
-- **L4 编译与运行时自适应层**：确定性编译选项 + 17 候选模式本机自动校准，基于 CPU/缓存/源码 SHA256 指纹实现缓存复用（首次校准约 32.4 分钟，指纹命中复用约 11.16 秒）。
+源码仓库用户先下载完整附件，再执行 `python3 tools/import_release_data.py /path/to/cpu-exact-vector-search-v2.0-course-full.zip` 导入负载，随后运行下方命令。首次安装缺失依赖需要联网，负载准备无需联网。
 
-![四层软硬件跨层优化体系与 8 路 AoSoA / VPMADDWD 数据流](report/figures/fig1_cross_layer_arch.png)
+## 一键校验与复现
 
-## 快速复现（推荐方式）
-
-**推荐直接下载 [v1.0-course Release](https://github.com/KINGJIJI0115/cpu-exact-vector-search/releases/tag/v1.0-course) 中的 [`cpu-exact-vector-search-v1.0-course-full.zip`](https://github.com/KINGJIJI0115/cpu-exact-vector-search/releases/download/v1.0-course/cpu-exact-vector-search-v1.0-course-full.zip)**（已随包附带 SIFTsmall、SIFT1M、GloVe25 全部原始负载与完整实验证据，无需另行下载数据；请勿使用 GitHub 自动生成的 `Source code` 压缩包代替）。
-
-解压后在 Ubuntu 22.04 / WSL2 终端进入根目录执行：
-
-```bash
-python3 verify_bundle.py
-bash reproduce.sh --quick   # 快速验收：编译、回归测试、Z3 形式化验证与报告生成（约 1 分钟）
-bash reproduce.sh           # 完整复现：本机 26 配置校准 + 78 项 Faiss 同轮对照（预留数小时）
-```
-
-> 可附加 `--cpu <id>` 指定空闲逻辑 CPU。首次缺少系统工具或 Python 依赖时脚本会自动安装（需联网与相应权限）。
-
-## 从本源码仓库运行
-
-本 Git 仓库保留完整核心代码、14 页课程报告、5 张配图及主要归档结果（不含大体积原始负载与构建产物）。克隆后可直接完成校验与快速验收：
+在 Linux x86-64 或 Windows WSL2 中进入完整包解压目录：
 
 ```bash
 python3 verify_bundle.py
+bash reproduce.sh --check-env
 bash reproduce.sh --quick
-```
-
-如需在本源码仓库内运行完整 78 项实验，先从上述 Release 完整包导入经过 SHA256 校验的原始负载（不覆盖源码）：
-
-```bash
-python3 tools/import_release_data.py /path/to/cpu-exact-vector-search-v1.0-course-full.zip
 bash reproduce.sh
 ```
 
-从归档数据一键重绘 5 张配图与重编 PDF 报告：
+- `--quick`：执行编译、4 组集成回归、三组 Z3 形式化验证、SIFTsmall 48 项回归并生成本机验收 PDF 与 `SUCCESS.json`。
+- 默认完整模式：使用 `autotune_v2` 离线准备三份负载，完成 26 配置本机校准（或指纹命中秒级复用）与 78 项同轮 Faiss 对照并生成本机报告（建议预留数小时与至少 8 GiB 可用内存）。
+- 可通过 `--cpu <id>` 指定逻辑核心，通过 `--require-performance-target` 启用 78/78 性能门禁。
 
-```bash
-python3 packaging/generate_figures.py
-python3 packaging/render_report.py
-```
-
-## 环境要求与输出说明
-
-- **运行环境**：Ubuntu 22.04 / WSL2 Ubuntu，Python 3.10+，x86-64 CPU 支持 AVX2/FMA，建议预留 ≥ 4 GiB 内存与 ≥ 3 GiB 磁盘空间。
-- **结果目录**：新运行输出在 `results/autotune_时间戳/`，含步骤日志 `steps.json`、状态摘要 `SUCCESS.json`、78 项对比 `confirmation/` 与本机报告 `report/`。流程执行、正确性检查与性能领先数三项状态独立记录（快速模式性能状态为 `not_evaluated`）。
-
-## 仓库导航
-
-| 内容 | 路径 |
-|---|---|
-| 14 页课程报告 PDF 与源稿 | [report/](report/) |
-| 配图数据来源与重绘脚本 | [report/figures/SOURCES.md](report/figures/SOURCES.md) · [packaging/generate_figures.py](packaging/generate_figures.py) |
-| 默认自动校准内核与测试 | [autotune/](autotune/) |
-| 固定版内核与分层消融代码 | [baseline/src/](baseline/src/) |
-| 学校服务器 78 项对照记录 | [evidence/faiss78/summary.csv](evidence/faiss78/summary.csv) |
-| 详细复现与分步指南 | [REPRODUCE.md](REPRODUCE.md) |
-| 课程要求对照表与 AI 辅助记录 | [COURSE_CHECKLIST.md](COURSE_CHECKLIST.md) · [AI_ASSISTANCE_FINAL.md](AI_ASSISTANCE_FINAL.md) |
-| 基准数据来源与第三方引用 | [DATA_SOURCES.md](DATA_SOURCES.md) |
-| Release 发布与独立验收记录 | [docs/RELEASE_NOTES.md](docs/RELEASE_NOTES.md) · [docs/PUBLIC_VALIDATION.md](docs/PUBLIC_VALIDATION.md) |
-
-## 使用与数据说明
-
-本项目源码与报告用于《软件系统优化》课程项目提交与复现评审；所含 SIFT / GloVe 基准数据集与 Faiss、OpenBLAS、Z3 等第三方依赖仅用于课程评测与可复现性验证，相关来源与学术引用见 [DATA_SOURCES.md](DATA_SOURCES.md)，权利归原提供方所有。独立环境下的快速功能验证与离线数据准备测试记录见 [docs/PUBLIC_VALIDATION.md](docs/PUBLIC_VALIDATION.md)。
+结果输出至 `results/autotune_<时间戳>/`（含 `SUCCESS.json`、`performance.json`、`steps.json`、`report/reproduction_report.pdf` 与 `reproduction_evidence.zip`）。原 v1 历史记录保留在 `history/`、`autotune/` 与 `baseline/` 中便于完整追溯。

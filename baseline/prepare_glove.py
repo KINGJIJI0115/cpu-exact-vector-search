@@ -15,5 +15,5 @@ with h5py.File(source,'r') as f:
         a=np.empty((len(x),x.shape[1]+1),dtype='<i4');a[:,0]=x.shape[1];a[:,1:]=x.view('<i4')
         path=d/f'glove_{name}.fvecs';a.tofile(path)
         info[name]={'shape':list(x.shape),'sha256':hashlib.sha256(path.read_bytes()).hexdigest()}
-manifest.write_text(json.dumps({'source':'https://ann-benchmarks.com/glove-25-angular.hdf5','source_sha256':digest,'description':'GloVe25 word embeddings; ANN-Benchmarks train/test split. Float64 L2 normalization then float32 storage. Evaluate exact squared L2 on stored floats, not original angular scores; independent double reference recomputed.','h5py':h5py.__version__,'files':info},indent=2))
+(d/'prepared_manifest.json').write_text(json.dumps({'source':'https://ann-benchmarks.com/glove-25-angular.hdf5','source_sha256':digest,'description':'GloVe25 word embeddings; ANN-Benchmarks train/test split. Float64 L2 normalization then float32 storage. Evaluate exact squared L2 on stored floats, not original angular scores; independent double reference recomputed.','h5py':h5py.__version__,'files':info},indent=2))
 print(manifest)

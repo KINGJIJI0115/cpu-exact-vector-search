@@ -1,6 +1,6 @@
 # 基准数据来源与第三方依赖说明
 
-本源码仓库不包含大体积原始向量文件；Release 附件 `cpu-exact-vector-search-v1.0-course-full.zip` 随包附带 SIFTsmall、SIFT1M 与 GloVe25 三份标准测试负载，供课程评测与离线复现使用（与课程定稿逐文件 SHA256 一致）。在源码仓库中可通过 `python3 tools/import_release_data.py <完整ZIP路径>` 导入经过校验的负载。
+本v2完整课程包附带SIFTsmall、SIFT1M、GloVe25三份原始负载，存放在baseline/data/。解压后无需另行下载数据集，大小与SHA256见DATA_MANIFEST.json。
 
 ## 数据来源与预处理
 
@@ -20,3 +20,5 @@
 - **第三方依赖**：Faiss、NumPy、OpenBLAS、Z3、h5py、matplotlib、ReportLab 等均遵循其各自原有许可协议，由脚本按需安装，不纳入源码仓库。
 
 本仓库及复现包内包含的基准数据集仅用于《软件系统优化》课程评测与可复现性验证，权利归原提供方所有。
+
+补充：SIFTsmall 镜像带有 MIT 标注，SIFT1M 上游未核实到明确的再分发许可；这两项的上游再分发状态仍记录为未确认，详见 `docs/DATA_RIGHTS_STATUS.json`。本项目的源码许可不覆盖第三方数据。

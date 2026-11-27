@@ -10,8 +10,8 @@ revision='8956d7e088e0b79b6901c234632e801fa37d731d'
 url=f'https://huggingface.co/datasets/zjd2000/ANN_SIFT/resolve/{revision}/sift.tar.gz'
 archive=root/'sift.tar.gz.part'
 if not archive.exists():
-    with urllib.request.urlopen(url,timeout=60) as source,archive.open('wb') as dest:
-        shutil.copyfileobj(source,dest)
+    raise FileNotFoundError('完整提交包缺少SIFT1M原始归档，请检查解压内容。')
+
 def sha(path):
     h=hashlib.sha256()
     with path.open('rb') as f:
@@ -24,6 +24,6 @@ with tarfile.open(archive) as tar:
         with tar.extractfile('sift/'+name) as source,(root/name).open('wb') as dest:
             shutil.copyfileobj(source,dest)
 manifest={'source':url,'original_source':'ftp://ftp.irisa.fr/local/texmex/corpus/sift.tar.gz',
-          'license':'Original terms not independently verified; do not redistribute data.',
+          'license':'Bundled course workload; provenance and rights notes: DATA_SOURCES.md',
           'sha256':{p.name:sha(p) for p in root.iterdir() if p.suffix in ['.part','.fvecs','.ivecs']}}
-(root/'manifest.json').write_text(json.dumps(manifest,indent=2));print(json.dumps(manifest,indent=2))
+(root/'prepared_manifest.json').write_text(json.dumps(manifest,indent=2));print(json.dumps(manifest,indent=2))
